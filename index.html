@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Dr. Sofia Mora</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo-head.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #f9f6f1;">
+            <div class="container-fluid">
+                <!-- Logo a la izquierda -->
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" alt="Logo Clínica">
+                </a>
+                <!-- Botón SOLO para el móvil  --HAMBURGUESA-- -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menú centrado -->
+                <div class="collapse navbar-collapse menu-centrado" id="navbarNav">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#especialidades">Especialidades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cobertura">Cobertura</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                    <!-- Botón de WhatsApp para móvil (dentro del menú colapsable) -->
+                    <div class="text-center mobile-only">
+                        <a href="https://api.whatsapp.com/send/?phone=12345678" class="whatsapp-btn" target="_blank"
+                            title="Reserva tu turno">
+                            <img src="img/whatsapp.png" alt="WhatsApp"
+                                style="height:32px;width:32px;vertical-align:middle;">
+                            <span class="whatsapp-text">Reserva tu turno</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Botón de WhatsApp para escritorio (fuera del menú) -->
+                <a href="https://api.whatsapp.com/send/?phone=12345678" class="whatsapp-btn desktop-only"
+                    target="_blank" title="Reserva tu turno">
+                    <img src="img/whatsapp.png" alt="WhatsApp" style="height:32px;width:32px;vertical-align:middle;">
+                    <span class="whatsapp-text">Reserva tu turno</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Secciones principales -->
+
+    <!-- Sección de inicio con imagen de consultorio -->
+    <section id="inicio" class="hero-section">
+        <div class="container text-white texto-izquierda">
+            <div class="bloque-titulo">
+                <h1 class="display-4 fw-bold linea-hero">Tu Sonrisa</h1>
+                <h1 class="display-4 fw-bold linea-hero">es Nuestra Felicidad</h1>
+            </div>
+            <p class="lead linea-hero bloque-parrafo">
+                En nuestro Centro Odontológico nos dedicamos a cuidar tu salud bucal con atención personalizada,<br>
+                tecnología avanzada y un equipo comprometido con tu bienestar.
+
+                <!-- Línea decorativa -->
+            <div class="linea-decorativa"></div>
+            <!-- Botón -->
+            <div class="boton-consulta">
+                <a href="https://api.whatsapp.com/send/?phone=12345678" class="btn btn-outline-light">Envíanos tu
+                    consulta</a>
+            </div>
+        </div>
+
+        <!-- Flecha SVG como imagen -->
+        <div class="chevron-container">
+            <a href="#nosotros" class="chevron-link">
+                <img src="img/flecha.png" alt="Flecha hacia abajo" class="chevron-svg">
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros con imagen semitransparente de fondo -->
+
+    <section id="nosotros">
+        <div class="contenido-nosotros">
+            <h2>Nosotros</h2>
+            <p>
+                Nuestro equipo está conformado por tres profesionales apasionados por la odontología, con una sólida
+                formación y una profunda vocación de servicio. El equipo está dirigido por la Dra. Sofia Mora y cada uno
+                aporta su experiencia y compromiso para brindar
+                atención personalizada, soluciones innovadoras y un trato humano que prioriza el bienestar de nuestros
+                pacientes. Juntos trabajamos con excelencia, dedicación y empatía para cuidar tu sonrisa como se merece.
+            </p>
+        </div>
+        <div class="miembro-wrapper">
+            <div class="miembro">
+                <img src="img/dentista1.png" alt="Dra. Sofia Mora">
+                <div class="info">
+                    <h3>Dra. Sofia Mora</h3>
+                    <h4 class="matricula-titulo">M.N: 123.456 &ndash; Odontóloga (UBA) – Máster en Odontología Estética
+                        y Rehabilitación Oral</h4>
+
+                    <p>Propietaria y directora del centro. Graduada con honores de la Facultad de Odontología de la
+                        Universidad de Buenos Aires (UBA), donde también se desempeñó como docente auxiliar. Cuenta con
+                        más
+                        de 15 años de experiencia en el campo de la odontología estética y la rehabilitación oral. Se ha
+                        formado en técnicas avanzadas de diseño de sonrisa, carillas y prótesis de alta estética.
+                        Participa
+                        activamente en congresos nacionales e internacionales, manteniéndose siempre actualizada en las
+                        últimas tendencias. Su enfoque combina precisión clínica con un trato humano y empático,
+                        priorizando
+                        el bienestar integral de cada paciente. Es reconocida por su compromiso con la excelencia y la
+                        calidez en cada tratamiento.</p>
+                </div>
+            </div>
+        </div>
+        <div class="miembros-fila">
+            <div class="miembro">
+                <img src="img/dentista4.png" alt="Dr. Diego Garcia">
+                <div class="info">
+                    <h3>Dr. Diego Garcia</h3>
+                    <h4 class="matricula-titulo">M.N: 123.456 – Odontólogo (UBA)</h4>
+                    <p>Especialista en ortodoncia y ortopedia maxilar. Amplia experiencia en tratamientos para niños y
+                        adolescentes.</p>
+                </div>
+            </div>
+            <div class="miembro">
+                <img src="img/dentista3.png" alt="Dra. Julieta Diaz">
+                <div class="info">
+                    <h3>Dra. Julieta Diaz</h3>
+                    <h4 class="matricula-titulo">M.N: 234.567 – Odontóloga (UBA)</h4>
+                    <p>Especialista en implantología y cirugía oral. Enfoque en rehabilitación funcional y estética
+                        dental.</p>
+                </div>
+            </div>
+            <div class="miembro">
+                <img src="img/dentista5.png" alt="Dr. Juan Gómez">
+                <div class="info">
+                    <h3>Dr. Juan Gómez</h3>
+                    <h4 class="matricula-titulo">M.N: 345.678 – Odontólogo (UBA)</h4>
+                    <p>Especialista en odontología estética y restauradora. Experto en carillas, blanqueamientos y
+                        rehabilitación oral.</p>
+                </div>
+            </div>
+            <div class="miembro">
+                <img src="img/dentista2.png" alt="Dr. Iván Corradi">
+                <div class="info">
+                    <h3>Dr. Iván Corradi</h3>
+                    <h4 class="matricula-titulo">M.N: 456.789 – Odontólogo (UBA)</h4>
+                    <p>Especialista en odontopediatría y prevención. Atención integral para niños y adolescentes.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección Especialidades -->
+
+    <section id="especialidades">
+        <div class="contenido-especialidades">
+            <h2>Especialidades</h2>
+            <p>
+                Nuestro equipo está conformado por tres profesionales apasionados por la odontología, con una sólida
+                formación y una profunda vocación de servicio. El equipo está dirigido por la Dra. Sofia Mora y cada uno
+                aporta su experiencia y compromiso para brindar
+                atención personalizada, soluciones innovadoras y un trato humano que prioriza el bienestar de nuestros
+                pacientes. Juntos trabajamos con excelencia, dedicación y empatía para cuidar tu sonrisa como se merece.
+            </p>
+        </div>
+
+
+        <!--YO TENGO EL TEMA ACA-->
+
+        <div class="urgencia-destacada-wrapper">
+            <div class="urgencia-destacada">
+                <img src="img/urgencia.png" alt="Atención de Urgencias" class="urgencia-img">
+                <div class="urgencia-info">
+                    <h3 class="urgencia-titulo">Atención de Urgencias</h3>
+                    <p class="urgencia-descripcion">
+                        Brindamos asistencia inmediata en casos de dolor intenso, infecciones, fracturas dentales o
+                        traumatismos.
+                        Nuestro equipo está preparado para resolver emergencias con rapidez y eficacia, priorizando
+                        siempre el alivio y la seguridad del paciente.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--YO TENGO EL TEMA ACA-->
+
+        <div class="especialidades-fila">
+            <div class="especialidad-card">
+                <img src="img/especialidad1.png" alt="Especialidad 1">
+                <h4>Odontología General y Preventiva</h4>
+                <p>Controles periódicos, limpiezas y tratamientos básicos para mantener una boca sana. Prevención como
+                    clave para evitar problemas futuros.</p>
+            </div>
+            <div class="especialidad-card">
+                <img src="img/especialidad2.png" alt="Especialidad 2">
+                <h4>Odontopediatría</h4>
+                <p>Atención integral para niños y adolescentes. Prevención, educación y tratamientos adaptados a cada
+                    etapa del crecimiento.</p>
+            </div>
+            <div class="especialidad-card">
+                <img src="img/especialidad3.png" alt="Especialidad 3">
+                <h4>Ortodoncia y Ortopedia Maxilar</h4>
+                <p>Corrección de la posición de los dientes y la mordida mediante brackets o alineadores invisibles.
+                    Mejora estética y funcional.</p>
+            </div>
+        </div>
+        <div class="especialidades-fila">
+            <div class="especialidad-card">
+                <img src="img/especialidad4.png" alt="Especialidad 4">
+                <h4>Periodoncia</h4>
+                <p>Cuidado y tratamiento de encías y tejidos de soporte dental. Prevención y manejo de enfermedades
+                    periodontales.</p>
+            </div>
+            <div class="especialidad-card">
+                <img src="img/especialidad5.png" alt="Especialidad 5">
+                <h4>Implantología y Cirugía Oral</h4>
+                <p>Reemplazo de piezas dentales con implantes de última generación y cirugías complejas para restaurar
+                    la función oral.</p>
+            </div>
+            <div class="especialidad-card">
+                <img src="img/especialidad6.png" alt="Especialidad 6">
+                <h4>Estética y Rehabilitación Avanzada</h4>
+                <p>Blanqueamientos, carillas y prótesis de alta estética. Tratamientos personalizados para devolver
+                    armonía y confianza en la sonrisa.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Sección Cobertura con imagen de fondo -->
+    <section id="cobertura">
+        <div class="contenido-cobertura">
+            <h2>Cobertura</h2>
+            <p>
+                Consultá el alcance de tu plan de cobertura para obra social o prepaga.<br>
+                <em>*La cobertura puede ser modificada por el prestador.</em>
+            </p>
+        </div>
+        <div class="cobertura-botones">
+            <button class="btn-cobertura" id="btn-consultas" type="button">Consultas</button>
+            <button class="btn-cobertura" id="btn-guardia" type="button">Guardia 24/7</button>
+            <button class="btn-cobertura" id="btn-estudios" type="button">Intervenciones quirúrgicas</button>
+        </div>
+
+        <div class="cobertura-contenidos">
+            <div class="contenido-cobertura" data-cobertura="consultas">
+                <p><strong>OSDE:</strong> 2 consultas al año (con copago mínimo)</p>
+                <p><strong>Swiss Medical:</strong> 3 consultas al año (hasta 4 según plan)</p>
+                <p><strong>Galeno:</strong> 2 a 3 consultas al año, depende del plan</p>
+                <p><strong>OMINT:</strong> 3 consultas al año (plan básico), más en planes superiores</p>
+                <p><strong>Medifé:</strong> 2 consultas al año (copago reducido)</p>
+                <p><strong>Sancor Salud:</strong> 2 consultas al año, ampliable según plan</p>
+                <p><strong>Prevención Salud:</strong> 3 consultas al año en cartilla</p>
+                <p><strong>Federada Salud:</strong> 2 consultas al año, con posibilidad de reintegros</p>
+                <p><strong>IOMA:</strong> 2 consultas al año en hospitales y clínicas de cartilla</p>
+                <p><strong>PAMI:</strong> 2 consultas anuales sin costo</p>
+                <p><strong>Accord Salud:</strong> 2 consultas al año (planes altos ofrecen más)</p>
+                <p><strong>Hospital Italiano Prepaga:</strong> 3 consultas al año en consultorios propios</p>
+                <p><strong>Hospital Británico Prepaga:</strong> 3 consultas anuales, depende del plan</p>
+                <p><strong>IOSFA:</strong> 2 consultas al año para titulares, ampliable a familiares</p>
+                <p><strong>OSDEPYM:</strong> 2 consultas al año en cartilla nacional</p>
+            </div>
+
+            <div class="contenido-cobertura" data-cobertura="guardia">
+                <p><strong>OSDE:</strong> Guardia 24/7 en sanatorios de cartilla (con copago según plan)</p>
+                <p><strong>Swiss Medical:</strong> Urgencias cubiertas 365 días (algunos planes sin copago)</p>
+                <p><strong>Galeno:</strong> Guardia odontológica y médica 24 horas en red propia</p>
+                <p><strong>OMINT:</strong> Atención de emergencias 24/7 (incluye servicio de ambulancia en planes altos)
+                </p>
+                <p><strong>Medifé:</strong> Cobertura de guardia con copago reducido en clínicas adheridas</p>
+                <p><strong>Sancor Salud:</strong> Guardia 24 hs en todo el país (puede requerir autorización)</p>
+                <p><strong>Prevención Salud:</strong> Atención de urgencias sin límite, con coseguro</p>
+                <p><strong>Federada Salud:</strong> Guardia médica y odontológica con cobertura parcial</p>
+                <p><strong>IOMA:</strong> Guardia 24 hs en hospitales públicos y privados de cartilla</p>
+                <p><strong>PAMI:</strong> Emergencias y guardias médicas cubiertas en prestadores asignados</p>
+                <p><strong>Accord Salud:</strong> Guardia las 24 horas, cobertura total en planes superiores</p>
+                <p><strong>Hospital Italiano Prepaga:</strong> Guardia médica y odontológica en sede central 24/7</p>
+                <p><strong>Hospital Británico Prepaga:</strong> Emergencias cubiertas en sede central y sanatorios
+                    asociados</p>
+                <p><strong>IOSFA:</strong> Guardia permanente en hospitales militares y convenios privados</p>
+                <p><strong>OSDEPYM:</strong> Emergencias cubiertas en sanatorios de cartilla nacional</p>
+            </div>
+
+            <div class="contenido-cobertura" data-cobertura="estudios">
+                <p><strong>OSDE:</strong> Radiografías digitales cubiertas al 100%, tomografías con autorización</p>
+                <p><strong>Swiss Medical:</strong> Estudios de diagnóstico por imágenes cubiertos (copago según plan)
+                </p>
+                <p><strong>Galeno:</strong> Radiografías y panorámicas cubiertas, tomografías con coseguro</p>
+                <p><strong>OMINT:</strong> Estudios básicos al 100%, tomografías y resonancias con autorización previa
+                </p>
+                <p><strong>Medifé:</strong> Radiografías simples incluidas, estudios complejos con copago reducido</p>
+                <p><strong>Sancor Salud:</strong> Cobertura de imágenes diagnósticas, hasta 3 estudios avanzados al año
+                </p>
+                <p><strong>Prevención Salud:</strong> Estudios por imágenes incluidos, con límite anual según plan</p>
+                <p><strong>Federada Salud:</strong> Radiografías cubiertas en cartilla, tomografías con coseguro</p>
+                <p><strong>IOMA:</strong> Cobertura en estudios básicos y especializados en hospitales y clínicas
+                    asociadas</p>
+                <p><strong>PAMI:</strong> Radiografías odontológicas incluidas, estudios avanzados con derivación</p>
+                <p><strong>Accord Salud:</strong> Estudios cubiertos al 100% en cartilla, con autorización para alta
+                    complejidad</p>
+                <p><strong>Hospital Italiano Prepaga:</strong> Radiografías, panorámicas y tomografías en sedes propias
+                </p>
+                <p><strong>Hospital Británico Prepaga:</strong> Estudios de imágenes cubiertos, con prioridad en sus
+                    centros</p>
+                <p><strong>IOSFA:</strong> Estudios de diagnóstico cubiertos en hospitales militares y cartilla privada
+                </p>
+                <p><strong>OSDEPYM:</strong> Radiografías incluidas, estudios de mayor complejidad con coseguro</p>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+
+    <section id="contacto">
+        <div class="contenido-contacto">
+            <h2>Contacto</h2>
+            <p>
+                Estamos a tu disposición para responder consultas, brindarte asesoramiento y coordinar turnos. Podés
+                comunicarte con nosotros a través del formulario, por teléfono o visitándonos en nuestro consultorio.
+            </p>
+        </div>
+
+        <div class="contacto-info-mapa">
+            <div class="contacto-datos">
+                <h3>Datos de contacto</h3>
+                <p><strong>Teléfono:</strong> <a href="tel:+541112345678">+54 11 1234-5678</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@odontologia.com">info@odontologia.com</a></p>
+                <p><strong>Dirección:</strong> Av. Bartolomé Mitre y Las Flores, Wilde</p>
+            </div>
+
+            <h3 class="ubicacion-movil">Nuestra ubicación</h3>
+            <div class="contacto-mapa">
+                
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.044692818647!2d-58.32013202514063!3d-34.704052662802454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33265d2b3269b%3A0x3f34a3806bc5d57a!2sAvenida%20Bartolom%C3%A9%20Mitre%20%26%20Las%20Flores%2C%20B1875%20Wilde%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1758581118316!5m2!1ses-419!2sar"
+                    width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - Odontología General Dr. Sofia Mora. Todos los derechos reservados.</p>
+            <!-- <p>Síguenos en: -->
+            <!-- <a href="#">Facebook</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">LinkedIn</a> -->
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        // Scroll correcto solo en móvil después de cerrar el menú hamburguesa
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.navbar-nav .nav-link[href^="#"]').forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    var navbarCollapse = document.querySelector('.navbar-collapse');
+                    var isMobile = window.innerWidth <= 600;
+                    var isOpen = navbarCollapse && navbarCollapse.classList.contains('show');
+                    if (isMobile && isOpen) {
+                        e.preventDefault();
+                        var bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+                        bsCollapse.hide();
+                        setTimeout(function () {
+                            var targetId = link.getAttribute('href');
+                            var target = document.querySelector(targetId);
+                            if (target) {
+                                var header = document.querySelector('header');
+                                var headerHeight = header ? header.offsetHeight : 0;
+                                window.scrollTo({
+                                    top: target.offsetTop - headerHeight,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }, 400);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const miembros = document.querySelectorAll('.miembros-fila .miembro');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-up');
+                        observer.unobserve(entry.target); // solo una vez
+                    }
+                });
+            }, { threshold: 0.0001 }); // animación empieza antes
+
+            miembros.forEach(miembro => observer.observe(miembro));
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector('.hero-section .bloque-titulo').classList.add('animate-hero');
+            document.querySelector('.hero-section .bloque-parrafo').classList.add('animate-hero');
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Oculta todos los contenidos
+            function ocultarTodos() {
+                document.querySelectorAll('.contenido-cobertura[data-cobertura]').forEach(function (div) {
+                    div.style.display = 'none';
+                });
+            }
+
+            // Muestra el contenido correspondiente
+            function mostrarContenido(tipo) {
+                ocultarTodos();
+                var div = document.querySelector('.contenido-cobertura[data-cobertura="' + tipo + '"]');
+                if (div) div.style.display = 'block';
+            }
+
+            // Asigna eventos a los botones
+            document.getElementById('btn-consultas').addEventListener('click', function () {
+                mostrarContenido('consultas');
+            });
+            document.getElementById('btn-guardia').addEventListener('click', function () {
+                mostrarContenido('guardia');
+            });
+            document.getElementById('btn-estudios').addEventListener('click', function () {
+                mostrarContenido('estudios');
+            });
+
+            // Opcional: oculta todos al cargar
+            ocultarTodos();
+        });
+    </script>
+</body>
+
+</html>

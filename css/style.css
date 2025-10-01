@@ -1,0 +1,1338 @@
+/* ===========================
+   Estilos Generales del Sitio
+=========================== */
+
+/* Fuente principal para el cuerpo */
+body {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ===========================
+   Header / Navbar
+=========================== */
+header {
+    background-color: #f9f6f1;
+    /* <- este es el color que querés */
+    color: #000000;
+    padding: 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.menu-centrado {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 100%;
+}
+
+/* Navbar interno, opcional si querés más control */
+header .navbar {
+    background-color: transparent;
+    /* ya lo pintamos en el header */
+}
+
+/* Navbar centrado */
+header .navbar-collapse {
+    justify-content: center !important;
+    /* centra horizontalmente los links */
+}
+
+/* Opcional: espacio entre links */
+header .navbar-nav .nav-item {
+    margin: 0 0.2rem;
+    /* ajusta el espacio entre links */
+}
+
+/* Logo del header */
+header .navbar-brand img {
+    /* tamaño del logo */
+    max-height: 60px;
+    padding-left: 4rem;
+    /*CON ESTO MOVEMOS EL LOGO EN SENTIDO HORIZONTAL*/
+
+
+
+}
+
+/*colores*/
+/*color nombre profesional: #065a5c*/
+/*color logo diente: #8474A1*/
+/*color fondo header: #f9f6f1*/
+/*color links header: #212529*/
+/*color fondo secciones: #053D58*/
+
+/* Links del header */
+header .nav-link {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    /* color: #065a5c; */
+    color: #212529;
+    transition: color 0.3s;
+    font-size: 1.2rem;
+    /* <- ajusta este valor al tamaño que quieras */
+    ;
+}
+
+/* Hover sobre links */
+header .nav-link:hover {
+    /* color: #8474A1; */
+    color: #065a5c;
+}
+
+/* Link activo */
+header .nav-link.active {
+    color: #f9f6f1;
+    font-weight: 600;
+}
+
+/* Títulos dentro del header */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.whatsapp-btn {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    background: #25D366;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: background 0.2s;
+    z-index: 1100;
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe57;
+}
+
+.whatsapp-btn img {
+    margin-right: 0.5em;
+}
+
+.whatsapp-text {
+    display: inline-block;
+}
+
+/* Ocultar por defecto el botón móvil en escritorio */
+.mobile-only {
+    display: none;
+}
+
+/* Mostrar por defecto el botón escritorio */
+.desktop-only {
+    display: inline-block;
+}
+
+section {
+    /* ... */
+    background: #fff;
+    /* obligatorio para que se vea la sombra */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* sombra suave debajo */
+    border-radius: 5px;
+    /* opcional, bordes redondeados */
+    padding: 40px 0;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('../img/consultorio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    /* Centramos verticalmente */
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    color: white;
+}
+
+/* Overlay */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* Contenedor */
+.hero-section>.container {
+
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 2rem;
+    transform: translateY(-50px);
+
+}
+
+
+
+/* Alineación a la izquierda */
+.texto-izquierda {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 1000px;
+    /* Opcional: limita el ancho máximo */
+    padding-left: 3rem;
+    /* Corrido a la derecha */
+}
+
+/* Títulos */
+.bloque-titulo {
+    margin-bottom: 2rem;
+    /* Separación entre h1 y p */
+}
+
+/*TEXTO PRINCIPAL, ACA SE ARREGLA*/
+.hero-section h1.linea-hero {
+    font-size: 5rem !important;
+    font-weight: 700;
+    line-height: 0.9 !important;
+    margin-bottom: 0.2rem;
+
+}
+
+/*TEXTO SECUNDARIO, ACA SE ARREGLA*/
+.bloque-parrafo {
+    font-size: 1.2rem !important;
+    font-weight: 900;
+    line-height: 1.4 !important;
+}
+
+
+
+/* Línea decorativa */
+.linea-decorativa {
+    width: 100%;
+    max-width: 500px;
+    height: 7px;
+    background-color: #8474A1;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-left: auto;
+    margin-right: 0;
+    /* <-- esto la empuja a la derecha */
+    transition: all 0.3s ease;
+}
+
+/* Botón alineado a la derecha */
+.boton-consulta {
+    width: 100%;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.boton-consulta .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+
+/* Flecha SVG */
+.chevron-container {
+    position: absolute;
+    bottom: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+}
+
+.chevron-svg {
+
+    width: 60px;
+    height: 60px;
+    fill: white;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+.chevron-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+vron-link svg {
+    width: 40px;
+    height: 40px;
+    animation: bounce 2s infinite;
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes heroFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(80px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.hero-section .bloque-titulo,
+.hero-section .bloque-parrafo {
+    opacity: 0;
+}
+
+.hero-section .bloque-titulo.animate-hero,
+.hero-section .bloque-parrafo.animate-hero {
+    animation: heroFadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* ===========================
+   Sección Nosotros
+=========================== */
+#nosotros {
+
+
+    background-color: #f9f6f1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    /* <-- cambia esto */
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    padding-top: 3rem;
+    /* opcional: ajustá el espacio superior de NOSOTROS*/
+    color: white;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+    /* Ajustá este valor según la altura del header */
+    width: 100%;
+    flex-direction: column;
+
+}
+
+
+#nosotros h2 {
+    /*Nosotros titulo*/
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #065a5c;
+}
+
+#nosotros p {
+    /*Nosotros parrafo debajo de titulo NOSOTROS*/
+    font-size: 1.1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #212529;
+
+    max-width: 1000px;
+}
+
+
+.contenido-nosotros {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.equipo-nosotros {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.miembro {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    /* ✅ Evita que se apilen si hay espacio */
+    max-width: 1200px;
+    /* Podés ajustar este valor */
+    /* margin: 2rem auto 0; */
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    padding: 1.5rem;
+    border-radius: 12px;
+    justify-content: flex-start;
+    /* ✅ Asegura que no se centre */
+    margin: 0;
+    /* margin-left: 0; */
+    /* Ajustás cuánto lo querés correr al miembro dentro del wrapper */
+
+}
+
+.miembro img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-self: flex-start;
+}
+
+.miembro .info {
+    flex: 1;
+    color: #8f3737;
+    margin-bottom: auto;
+    max-width: none;
+    /* Asegura que pueda expandirse */
+    width: 100%;
+    /* ✅ Asegura que use todo el espacio disponible */
+}
+
+.miembro h3 {
+    font-size: 2rem;
+    color: #065a5c;
+}
+
+.matricula-titulo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #1976a3;
+    margin: 0 0 0.5em 0;
+    letter-spacing: 0.02em;
+}
+
+.miembro-wrapper {
+    background: #fff;
+    /* color del recuadro */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    /* sombra */
+    border-radius: 16px;
+    /* bordes redondeados */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    /* distancia desde arriba */
+    margin-bottom: 2em;
+    /* distancia desde abajo */
+    padding: 0em;
+    /* espacio interno */
+    max-width: 1200px;
+    /* ancho máximo */
+    width: auto;
+    /* ancho automático */
+    position: center;
+    /* permite mover con top/left si lo necesitás */
+}
+
+.miembros-fila {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.miembros-fila .miembro {
+    background: #C2B7B5 !important;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    padding: 1.5rem;
+    max-width: 320px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1 !important;
+}
+
+.miembros-fila .miembro img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.miembros-fila .info {
+    text-align: center;
+}
+
+
+#nosotros .miembro p {
+    font-size: 1rem;
+    color: #212529;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    max-width: none;
+    margin-top: 2em;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(540px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.miembros-fila .miembro {
+    opacity: 0;
+    transition: opacity 2s, transform 0.8s;
+}
+
+.miembros-fila .miembro.animate-up {
+    animation: fadeInUp 2.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+
+}
+
+/* ===========================
+   Sección Especialidades
+=========================== */
+#especialidades {
+
+
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    /* <-- cambia esto */
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    padding-top: 3rem;
+    /* opcional: ajustá el espacio superior de NOSOTROS*/
+    color: white;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+    /* Ajustá este valor según la altura del header */
+    width: 100%;
+    flex-direction: column;
+
+}
+
+
+#especialidades h2 {
+    /*Especialidades titulo*/
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #065a5c;
+}
+
+#especialidades p {
+    /*Especialidades parrafo debajo de titulo ESPECIALIDADES*/
+    font-size: 1.1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #212529;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: 1000px;
+}
+
+/* Bloque destacado de Atención de Urgencias */
+.urgencia-destacada-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 2em auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0em;
+    /* probá con 0.5em o 0 si querés menos espacio */
+}
+
+.urgencia-destacada {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    padding: 2rem;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 0rem;
+}
+
+.urgencia-destacada:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    z-index: 2;
+}
+
+.urgencia-img {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 2em;
+}
+
+.urgencia-info {
+    flex: 1;
+}
+
+.urgencia-titulo {
+    color: #065a5c;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.urgencia-descripcion {
+    font-size: 1em;
+    color: #333;
+}
+
+/*cards especialidades*/
+.contenido-especialidades {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.equipo-especialidades {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.especialidades-fila {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.especialidad-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.especialidad-card img {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.especialidad-card h4 {
+    color: #065a5c;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.especialidad-card p {
+    font-size: 1em;
+    color: #333;
+}
+
+.especialidad-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 2;
+}
+
+/* ===========================
+   Sección Testimonios
+=========================== */
+#testimonios {
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    padding-top: 3rem;
+    color: #212529;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+    width: 100%;
+    flex-direction: column;
+}
+
+#testimonios h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #065a5c;
+}
+
+#testimonios p {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #212529;
+    max-width: 1000px;
+}
+
+.contenido-testimonios {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
+}
+
+/* ===========================
+   Sección Cobertura
+=========================== */
+#cobertura {
+    background-color: #fff;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-start;
+    /* <-- cambia esto */
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+    padding-top: 3rem;
+    /* opcional: ajustá el espacio superior de COBERTURA*/
+    color: white;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+    /* Ajustá este valor según la altura del header */
+    width: 100%;
+    flex-direction: column;
+    background-image: url('../img/prepagas.png');
+    /* o la imagen que quieras */
+}
+
+#cobertura::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Ajustá la opacidad y color para la transparencia */
+    z-index: 0;
+}
+
+#cobertura>* {
+    position: relative;
+    z-index: 1;
+}
+
+#cobertura h2 {
+    /*Cobertura titulo*/
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #065a5c;
+}
+
+#cobertura p {
+    /*Cobertura parrafo debajo de titulo COBERTURA*/
+    font-size: 1.1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #212529;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: 1000px;
+}
+
+.cobertura-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.cobertura-header span {
+    width: 16px;
+    height: 16px;
+    background: #FFC400;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cobertura-descripcion p {
+    color: #065a5c;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.cobertura-descripcion em {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.cobertura-botones {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 2.5rem 0;
+}
+
+.btn-cobertura {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 32px;
+    padding: 0.7em 2.2em;
+    border: 2px solid #065a5c;
+    background: #fff;
+    color: #065a5c;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    outline: none;
+}
+
+.btn-cobertura.active,
+.btn-cobertura:focus {
+    background: #f9f6f1;
+    color: #212529;
+    border-color: #065a5c;
+}
+
+.btn-cobertura:hover {
+    background: #f9f6f1;
+    color: #065a5c;
+}
+
+.cobertura-contenidos {
+    max-width: 1200px;
+    margin: 0 auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cobertura-contenidos.activo {
+    max-height: 2000px;
+    /* Un valor suficientemente grande para el contenido */
+}
+
+.contenido-cobertura {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #212529;
+    margin-bottom: 0em;
+    margin: 0 auto;
+}
+
+/* Elimina el espacio entre los p de .contenido-cobertura */
+.contenido-cobertura p {
+    margin-bottom: 0.5rem !important;
+
+}
+
+/* ===========================
+   Sección Contacto
+=========================== */
+
+#contacto {
+    background-color: #f9f6f1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    padding: 2rem 0 2rem 0;
+    padding-top: 3rem;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+    width: 100%;
+    flex-direction: column;
+}
+
+#contacto h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #065a5c;
+    text-align: center;
+}
+
+#contacto p {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    max-width: 1000px;
+}
+
+.contenido-contacto {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.contacto-info-mapa {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    /* o el valor que prefieras */
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.contacto-datos {
+    flex: 1 1 300px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 24px;
+    margin-top: 2rem;
+}
+
+.contacto-datos h3 {
+    color: #065a5c;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    text-align: center;
+
+}
+
+.contacto-datos p {
+    font-size: 1rem;
+    margin-bottom: 0.7em;
+    color: #212529;
+}
+
+.contacto-datos a {
+    color: #065a5c;
+    text-decoration: none;
+}
+
+.contacto-mapa {
+    flex: 2 1 400px;
+    min-width: 280px;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+}
+
+.contacto-mapa iframe {
+    width: 100%;
+    height: 480px;
+    border: 0;
+    display: block;
+}
+
+.ubicacion-movil {
+    display: none;
+}
+
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Links del footer */
+footer a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+
+
+/* ============================ */
+/* Estilos Responsive para Móviles */
+/* ============================ */
+@media (max-width: 480px) {
+
+    /* html {
+        scroll-padding-top: 56px;
+        /* Altura navbar móvil, ajusta según tu diseño */
+    */ header .navbar-brand img {
+        padding-left: 1rem;
+        max-height: 50px;
+    }
+
+    .menu-centrado {
+        position: static;
+        transform: none;
+        left: auto;
+        top: auto;
+        height: auto;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    header .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .navbar-nav .nav-item {
+        margin: 0.1rem 0;
+        /* más pegadas */
+    }
+
+    .whatsapp-btn {
+        right: 10px;
+        padding: 0.4em 0.7em;
+        font-size: 0.95em;
+        position: static;
+        width: auto;
+        justify-content: center;
+    }
+
+    .whatsapp-btn .whatsapp-text {
+        display: inline-block;
+        /* o block si preferís que esté debajo del ícono */
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+        margin-top: 2rem;
+        /* esto lo baja suavemente */
+    }
+}
+
+
+/* ============================ */
+/* Estilos Responsive para Tablets */
+/* ============================ */
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .hero-section>.container {
+        padding: 2rem 1rem;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .hero-section h1.linea-hero {
+        font-size: 2.5rem !important;
+        line-height: 1.1 !important;
+        text-align: left;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+
+    .bloque-parrafo {
+        font-size: 1rem !important;
+        text-align: left;
+        margin-top: 0rem;
+        margin-bottom: 4rem;
+    }
+
+    .texto-izquierda {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: left;
+    }
+
+    .linea-decorativa {
+        margin-left: auto;
+        margin-right: 0;
+        text-align: right;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .boton-consulta {
+        text-align: right;
+        margin-top: 2rem;
+    }
+
+    .boton-consulta .btn {
+        margin-right: 0;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+        width: 100%;
+    }
+
+    .whatsapp-btn {
+        position: static;
+        margin-top: 1rem;
+        justify-content: center;
+        width: auto;
+    }
+
+    .whatsapp-btn .whatsapp-text {
+        display: inline-block;
+    }
+
+
+    .chevron {
+        font-size: 2rem;
+    }
+
+    .chevron-container {
+        bottom: 120px;
+    }
+
+    .chevron-link svg,
+    .chevron-svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* ===========================
+       Sección Nosotros*/
+    #nosotros {
+        scroll-margin-top: 75px;
+    }
+
+    #nosotros p {
+        font-size: 1rem;
+        /* o probá con 0.9rem si querés más chico */
+    }
+
+    .miembro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .miembro img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .miembros-fila {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Opcional, centra los elementos */
+    }
+
+    .miembro {
+        width: 100%;
+        /* Opcional, ocupa todo el ancho disponible */
+        margin-bottom: 16px;
+        /* Espacio entre miembros */
+    }
+
+    /* ===========================
+       Sección Especialidades*/
+    .urgencia-destacada {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centra la imagen y el texto */
+        text-align: center;
+        /* Centra el texto */
+    }
+
+    .urgencia-img {
+        width: 100%;
+        max-width: 220px;
+        /* Ajusta el tamaño máximo si lo deseas */
+        margin-bottom: 16px;
+
+        /*centrado de la imagen*/
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+
+    }
+
+    .urgencia-info {
+        width: 100%;
+    }
+
+    .animate-up {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+
+
+    /* ===========================
+       Sección Cobertura*/
+
+    #cobertura {
+        background-image: url('../img/prepagas.png');
+        /* Cambia por tu imagen */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        /* Mantiene la imagen fija */
+    }
+
+    .cobertura-botones {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        /* Los botones ocupan todo el ancho */
+        gap: 12px;
+        /* Espacio entre botones */
+    }
+
+    .btn-cobertura {
+        width: 100%;
+    }
+
+    /* ===========================
+       Sección Contacto*/
+
+    .contacto-info-mapa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto-mapa {
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    .contacto-datos {
+        width: 90%;
+        max-width: 320px;
+        max-height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contacto-info-mapa {
+        flex-direction: column;
+        /* columna en pantallas chicas */
+        align-items: center;
+
+    }
+
+    .contacto-mapa {
+        max-width: 100%;
+        margin-top: 0;
+
+        padding: 0;
+        box-shadow: none;
+        /* opcional, si no quieres sombra */
+        background: none;
+        /* opcional, si no quieres fondo */
+        height: 320px;
+        /* igual que el iframe */
+    }
+
+    .contacto-mapa iframe {
+        height: 100%;
+        width: 100%;
+        border-radius: 12px;
+        /* si quieres bordes redondeados */
+        display: block;
+    }
+
+    .ubicacion-movil {
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #065a5c;
+        margin-bottom: 0rem;
+        padding: auto;
+
+    }
+}
