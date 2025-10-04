@@ -987,7 +987,8 @@ footer a {
 @media (max-width: 480px) {
     header .navbar-brand img {
         padding-left: 1rem;
-        max-height: 40px; /* Reducir de 60px a 40px en móviles */
+        max-height: 50px; /* Reducir de 60px a 40px en móviles */
+        position: center;
     }
 
     .menu-centrado {
