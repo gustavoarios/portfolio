@@ -48,3 +48,45 @@ document.addEventListener("DOMContentLoaded", function () {
   ocultarTodos();
   wrapper.classList.add('activo');
 });
+
+// Configuración EmailJS
+emailjs.init("9-38LuSOAnGUvLuOp"); // Tu Public Key
+
+// Manejo del formulario de contacto
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.querySelector('.formulario-contacto');
+    
+    if (formulario) {
+        formulario.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btnEnviar = document.querySelector('.btn-enviar');
+            const textoOriginal = btnEnviar.textContent;
+            btnEnviar.textContent = 'Enviando...';
+            btnEnviar.disabled = true;
+            
+            const templateParams = {
+                to_email: 'gustavoadonairios@gmail.com',
+                from_name: document.getElementById('nombre').value,
+                from_email: document.getElementById('email').value,
+                phone: document.getElementById('telefono').value,
+                subject: document.getElementById('asunto').value,
+                message: document.getElementById('mensaje').value
+            };
+            
+            emailjs.send('service_portfolio', 'template_j7isemc', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('¡Mensaje enviado correctamente! Te responderé pronto.');
+                    formulario.reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Error al enviar el mensaje. Por favor intenta nuevamente.');
+                })
+                .finally(function() {
+                    btnEnviar.textContent = textoOriginal;
+                    btnEnviar.disabled = false;
+                });
+        });
+    }
+});
