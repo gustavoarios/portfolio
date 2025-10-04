@@ -640,8 +640,6 @@ vron-link svg {
     /* Ajustá este valor según la altura del header */
     width: 100%;
     flex-direction: column;
-    background-image: url('../img/prepagas.png');
-    /* o la imagen que quieras */
 }
 
 #cobertura::before {
@@ -732,14 +730,15 @@ vron-link svg {
 
 .btn-cobertura.active,
 .btn-cobertura:focus {
-    background: #f9f6f1;
-    color: #212529;
-    border-color: #065a5c;
+    background: #22c55e;
+    color: #ffffff;
+    border-color: #22c55e;
 }
 
 .btn-cobertura:hover {
-    background: #f9f6f1;
-    color: #065a5c;
+    background: #22c55e;
+    color: #ffffff;
+    border-color: #22c55e;
 }
 
 .cobertura-contenidos {
