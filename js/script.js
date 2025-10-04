@@ -90,3 +90,40 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// Sistema de tabs para educación
+document.addEventListener("DOMContentLoaded", function () {
+  const btnEducacion = document.getElementById('btn-educacion');
+  const btnCertificaciones = document.getElementById('btn-certificaciones');
+  const contenidoEducacion = document.getElementById('contenido-educacion');
+  const contenidoCertificaciones = document.getElementById('contenido-certificaciones');
+
+  function mostrarEducacion() {
+    // Mostrar educación, ocultar certificaciones
+    contenidoEducacion.style.display = 'block';
+    contenidoCertificaciones.style.display = 'none';
+    
+    // Actualizar estados de botones
+    btnEducacion.classList.add('active');
+    btnCertificaciones.classList.remove('active');
+  }
+
+  function mostrarCertificaciones() {
+    // Mostrar certificaciones, ocultar educación
+    contenidoEducacion.style.display = 'none';
+    contenidoCertificaciones.style.display = 'block';
+    
+    // Actualizar estados de botones
+    btnEducacion.classList.remove('active');
+    btnCertificaciones.classList.add('active');
+  }
+
+  // Event listeners
+  if (btnEducacion && btnCertificaciones) {
+    btnEducacion.addEventListener('click', mostrarEducacion);
+    btnCertificaciones.addEventListener('click', mostrarCertificaciones);
+    
+    // Mostrar educación por defecto
+    mostrarEducacion();
+  }
+});

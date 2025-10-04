@@ -1169,24 +1169,46 @@ footer a {
 
     #cobertura {
         background-image: url('../img/prepagas.png');
-        /* Cambia por tu imagen */
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        /* Mantiene la imagen fija */
     }
 
     .cobertura-botones {
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        /* Los botones ocupan todo el ancho */
         gap: 12px;
-        /* Espacio entre botones */
     }
 
     .btn-cobertura {
         width: 100%;
+    }
+
+    /* Cards de educación responsive */
+    .educacion-destacado {
+        padding: 1.5rem;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .educacion-img {
+        width: 100px;
+        height: 100px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .educacion-titulo {
+        font-size: 1.3em;
+    }
+
+    .educacion-institucion {
+        font-size: 1.1em;
+    }
+
+    .educacion-descripcion {
+        font-size: 1em;
     }
 
     /* ===========================
@@ -1252,4 +1274,110 @@ footer a {
         padding: auto;
 
     }
+}
+
+/* Estilos para las cards de educación */
+.educacion-contenido {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+}
+
+.educacion-destacado-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Link wrapper para certificaciones */
+.educacion-destacado-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
+
+.educacion-destacado-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.educacion-destacado {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    padding: 2.5rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.educacion-destacado:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen para certificaciones */
+.educacion-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    margin-right: 2rem;
+    object-fit: cover;
+    background: #f0f0f0;
+    border: 2px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.educacion-info {
+    flex: 1;
+}
+
+.educacion-titulo {
+    color: #065a5c;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.educacion-institucion {
+    color: #22c55e;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.educacion-descripcion {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.educacion-estado {
+    display: flex;
+    align-items: center;
+}
+
+.estado-badge {
+    background: #22c55e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.estado-badge.completado {
+    background: #065a5c;
 }
