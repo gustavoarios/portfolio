@@ -256,15 +256,14 @@ section {
 
 
 
-/* Alineación a la izquierda */
+/* Alineación centrada */
 .texto-izquierda {
-    text-align: left;
-    margin-left: 0;
+    text-align: center;
+    margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
-    /* Opcional: limita el ancho máximo */
     padding-left: 3rem;
-    /* Corrido a la derecha */
+    padding-right: 3rem;
 }
 
 /* Títulos */
@@ -275,7 +274,7 @@ section {
 
 /*TEXTO PRINCIPAL, ACA SE ARREGLA*/
 .hero-section h1.linea-hero {
-    font-size: 5rem !important;
+    font-size: 3.5rem !important;  /* <-- AQUÍ cambias el tamaño del H1 */
     font-weight: 700;
     line-height: 0.9 !important;
     margin-bottom: 0.2rem;
@@ -284,8 +283,8 @@ section {
 
 /*TEXTO SECUNDARIO, ACA SE ARREGLA*/
 .bloque-parrafo {
-    font-size: 1.2rem !important;
-    font-weight: 900;
+    font-size: 1.2rem !important;  /* <-- AQUÍ cambias el tamaño del párrafo */
+    font-weight: 500;
     line-height: 1.4 !important;
 }
 
@@ -300,15 +299,14 @@ section {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     margin-left: auto;
-    margin-right: 0;
-    /* <-- esto la empuja a la derecha */
+    margin-right: auto;
     transition: all 0.3s ease;
 }
 
-/* Botón alineado a la derecha */
+/* Botón centrado */
 .boton-consulta {
     width: 100%;
-    text-align: right;
+    text-align: center;
     margin-top: 1rem;
 }
 
@@ -1036,7 +1034,7 @@ footer a {
     }
 
     .hero-section h1.linea-hero {
-        font-size: 2.5rem !important;
+        font-size: 2.5rem !important;  /* <-- Tamaño del H1 en móviles */
         line-height: 1.1 !important;
         text-align: left;
         margin-top: 0rem;
@@ -1044,7 +1042,7 @@ footer a {
     }
 
     .bloque-parrafo {
-        font-size: 1rem !important;
+        font-size: 1rem !important;  /* <-- Tamaño del párrafo en móviles */
         text-align: left;
         margin-top: 0rem;
         margin-bottom: 4rem;
@@ -1053,19 +1051,19 @@ footer a {
     .texto-izquierda {
         padding-left: 1rem;
         padding-right: 1rem;
-        text-align: left;
+        text-align: center;
     }
 
     .linea-decorativa {
         margin-left: auto;
-        margin-right: 0;
-        text-align: right;
+        margin-right: auto;
+        text-align: center;
         margin-top: 3rem;
         margin-bottom: 4rem;
     }
 
     .boton-consulta {
-        text-align: right;
+        text-align: center;
         margin-top: 2rem;
     }
 
