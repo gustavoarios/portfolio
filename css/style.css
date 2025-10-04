@@ -87,7 +87,7 @@ header .nav-link {
 /* Hover sobre links */
 header .nav-link:hover {
     /* color: #8474A1; */
-    color: #065a5c;
+    color: #25D366;
 }
 
 /* Link activo */
@@ -238,7 +238,7 @@ section {
     width: 100%;
     max-width: 500px;
     height: 7px;
-    background-color: #8474A1;
+    background-color: #25D366;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     margin-left: auto;
@@ -332,7 +332,7 @@ vron-link svg {
 #nosotros {
 
 
-    background-color: #f9f6f1;
+    background-color: #CCCCCC;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -533,12 +533,10 @@ vron-link svg {
 }
 
 /* ===========================
-   Sección Especialidades
+   Sección Proyectos
 =========================== */
-#especialidades {
-
-
-    background-color: #fff;
+#proyectos {
+    background-color: #000000;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -557,25 +555,23 @@ vron-link svg {
     /* Ajustá este valor según la altura del header */
     width: 100%;
     flex-direction: column;
-
 }
 
-
-#especialidades h2 {
-    /*Especialidades titulo*/
+#proyectos h2 {
+    /*Proyectos titulo*/
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #065a5c;
+    color: #25D366;
 }
 
-#especialidades p {
-    /*Especialidades parrafo debajo de titulo ESPECIALIDADES*/
+#proyectos p {
+    /*Proyectos parrafo debajo de titulo PROYECTOS*/
     font-size: 1.1rem;
     margin: 0 auto;
     line-height: 1.6;
     font-weight: 400;
-    color: #212529;
+    color: #CCCCCC;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -583,8 +579,8 @@ vron-link svg {
     max-width: 1000px;
 }
 
-/* Bloque destacado de Atención de Urgencias */
-.urgencia-destacada-wrapper {
+/* Bloque destacado de Proyecto Principal */
+.proyecto-destacado-wrapper {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto 2em auto;
@@ -594,7 +590,7 @@ vron-link svg {
     /* probá con 0.5em o 0 si querés menos espacio */
 }
 
-.urgencia-destacada {
+.proyecto-destacado {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -607,104 +603,59 @@ vron-link svg {
     align-items: center;
     text-align: left;
     transition: transform 0.2s, box-shadow 0.2s;
-    margin-bottom: 0rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
-.urgencia-destacada:hover {
+.proyecto-destacado:hover {
     transform: translateY(-12px) scale(1.03);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
     z-index: 2;
+    text-decoration: none;
+    color: inherit;
 }
 
-.urgencia-img {
+.proyecto-img {
     width: 180px;
     height: auto;
     border-radius: 8px;
     margin-right: 2em;
 }
 
-.urgencia-info {
+.proyecto-info {
     flex: 1;
 }
 
-.urgencia-titulo {
+.proyecto-titulo {
     color: #065a5c;
     font-family: 'Raleway', sans-serif;
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
 
-.urgencia-descripcion {
-    font-size: 1em;
-    color: #333;
+.proyecto-descripcion {
+    font-size: 1em !important;
+    color: #000000 !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
 }
 
-/*cards especialidades*/
-.contenido-especialidades {
+/*cards proyectos*/
+.contenido-proyectos {
     text-align: center;
     max-width: 100%;
     margin: 0 auto;
 }
 
-.equipo-especialidades {
+.equipo-proyectos {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 2rem;
-}
-
-.especialidades-fila {
-    display: flex;
-    gap: 2em;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    flex-wrap: wrap;
-    width: 100%;
-
-}
-
-.especialidad-card {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
-    padding: 1.5rem;
-    max-width: 400px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.especialidad-card img {
-    width: 180px;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1em;
-}
-
-.especialidad-card h4 {
-    color: #065a5c;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-}
-
-.especialidad-card p {
-    font-size: 1em;
-    color: #333;
-}
-
-.especialidad-card:hover {
-    transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-    transition: transform 0.2s, box-shadow 0.2s;
-    z-index: 2;
 }
 
 /* ===========================
@@ -1216,17 +1167,26 @@ footer a {
     }
 
     /* ===========================
-       Sección Especialidades*/
-    .urgencia-destacada {
+       Sección Proyectos*/
+    #proyectos {
+        scroll-margin-top: 75px;
+    }
+
+    .proyecto-destacado {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* Centra la imagen y el texto */
         text-align: center;
-        /* Centra el texto */
+        text-decoration: none;
+        color: inherit;
     }
 
-    .urgencia-img {
+    .proyecto-destacado:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .proyecto-img {
         width: 100%;
         max-width: 220px;
         /* Ajusta el tamaño máximo si lo deseas */
@@ -1237,11 +1197,9 @@ footer a {
         display: block;
         margin-left: auto;
         margin-right: auto;
-
-
     }
 
-    .urgencia-info {
+    .proyecto-info {
         width: 100%;
     }
 
