@@ -127,3 +127,35 @@ document.addEventListener("DOMContentLoaded", function () {
     mostrarEducacion();
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cvLink = document.getElementById('cv-link');
+    if (cvLink) {
+        cvLink.addEventListener('click', async function (e) {
+            // Si el navegador soporta download y el archivo es same-origin, el propio atributo puede bastar.
+            // Aquí intentamos forzar la descarga por fetch como respaldo.
+            const url = this.getAttribute('href');
+            const filename = this.getAttribute('download') || (url ? url.split('/').pop() : 'CV.pdf');
+            if (!url) return;
+
+            try {
+                // Previene el comportamiento por defecto y fuerza descarga vía Blob
+                e.preventDefault();
+                const resp = await fetch(url, { cache: 'no-store' });
+                if (!resp.ok) throw new Error('Network response not ok');
+                const blob = await resp.blob();
+                const blobUrl = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = blobUrl;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                URL.revokeObjectURL(blobUrl);
+            } catch (err) {
+                // fallback: abrir en nueva pestaña (y dejar que el navegador maneje la descarga si es posible)
+                window.open(url, '_blank', 'noopener');
+            }
+        });
+    }
+});

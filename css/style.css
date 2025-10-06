@@ -392,18 +392,19 @@ vron-link svg {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: flex-start;
     /* <-- cambia esto */
     justify-content: center;
     position: relative;
-    padding: 2rem;
-    padding-top: 3rem;
+    padding: 1.5rem 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     /* opcional: ajustá el espacio superior de NOSOTROS*/
     color: white;
     overflow: hidden;
-    scroll-margin-top: 85px;
+    scroll-margin-top: 65px;
     /* Ajustá este valor según la altura del header */
     width: 100%;
     flex-direction: column;
@@ -417,6 +418,7 @@ vron-link svg {
     font-weight: 700;
     margin-bottom: 20px;
     color: #065a5c;
+    text-align: center; /* <-- centrar el título */
 }
 
 #nosotros p {
@@ -1274,108 +1276,418 @@ footer a {
     }
 }
 
-/* Estilos para las cards de educación */
-.educacion-contenido {
-    width: 100%;
-    max-width: 1200px;
-    margin: 2rem auto 0;
-}
-
-.educacion-destacado-wrapper {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto 2rem auto;
-    display: flex;
-    justify-content: center;
-}
-
-/* Link wrapper para certificaciones */
-.educacion-destacado-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    width: 100%;
-}
-
-.educacion-destacado-link:hover {
-    text-decoration: none;
-    color: inherit;
-}
-
-.educacion-destacado {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
-    padding: 2.5rem;
-    background: #fff;
+/* Sobre mí: foto + texto */
+.sobremi-wrapper {
     display: flex;
     align-items: center;
-    text-align: left;
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
+    gap: 1.25rem;
+    max-width: 1000px;
+    margin: 0.5rem auto; /* menos espacio arriba/abajo */
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
 }
 
-.educacion-destacado:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* Imagen para certificaciones */
-.educacion-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
-    margin-right: 2rem;
+.perfil-img {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
     object-fit: cover;
-    background: #f0f0f0;
-    border: 2px solid #e0e0e0;
+    border: 3px solid rgba(37, 211, 102, 0.12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
     flex-shrink: 0;
 }
 
-.educacion-info {
-    flex: 1;
+/* Ajustes para texto dentro de sobremi */
+.contenido-nosotros {
+    text-align: left;
 }
 
-.educacion-titulo {
-    color: #065a5c;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.6em;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+/* Responsive: en móviles apilar la imagen encima del texto y centrar */
+@media (max-width: 768px) {
+    .sobremi-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem;
+        margin: 0.5rem auto;
+    }
+
+    .perfil-img {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 0.8rem;
+    }
+
+    .contenido-nosotros {
+        text-align: center;
+    }
 }
 
-.educacion-institucion {
-    color: #22c55e;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2em;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.educacion-descripcion {
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.educacion-estado {
+/* ===========================
+   Nosotros - Tecnologías y Filosofía
+=========================== */
+.nosotros-extra {
+    max-width: 1000px;
+    margin: 0.75rem auto 1.5rem auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column; /* apilar verticalmente */
 }
 
-.estado-badge {
-    background: #22c55e;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    display: inline-block;
+/* Reemplazar reglas de card para que no estén limitadas por fondo blanco/sombra */
+.tecnologias,
+.filosofia {
+    background: transparent; /* quitar fondo blanco */
+    border-radius: 0;        /* quitar bordes redondeados */
+    padding: 0;              /* eliminar padding tipo card */
+    box-shadow: none;        /* quitar sombra */
+    color: #212529;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.estado-badge.completado {
-    background: #065a5c;
+/* Centrar títulos de Tecnologías y Filosofía */
+.tecnologias h3,
+.filosofia h3 {
+    text-align: center;
+    font-family: "Lato", sans-serif; /* usar la misma fuente del proyecto */
+    font-weight: 700;                /* coherente con otros títulos */
+    color: #065a5c;
 }
+
+/* Badges, textos y enlaces secundarios usan la misma familia */
+.tech-item,
+.filosofia-text,
+.filosofia-links .cv-link,
+.filosofia-links .linkedin-link {
+    font-family: "Lato", sans-serif;
+}
+
+/* Asegurar títulos secundarios del sitio mantienen la misma familia */
+#nosotros h2,
+.proyecto-titulo,
+.educacion-titulo {
+    font-family: "Lato", sans-serif;
+}
+
+/* ===========================
+   Estilos Responsive Avanzados
+=========================== */
+
+/* Ocultar secciones por defecto en móviles */
+@media (max-width: 768px) {
+    #nosotros,
+    #proyectos,
+    #testimonios,
+    #cobertura,
+    #contacto {
+        display: none;
+    }
+
+    /* Mostrar solo el título y el botón de WhatsApp en la sección de inicio */
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 4rem 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .whatsapp-btn {
+        position: static;
+        margin: 1rem 0;
+        width: 80%;
+        max-width: 300px;
+        padding: 0.7em;
+        font-size: 1.1em;
+        border-radius: 50px;
+    }
+
+    .whatsapp-btn img {
+        width: 24px;
+        height: 24px;
+        margin-right: 0.5em;
+    }
+
+    /* Chevron en la sección de inicio */
+    .chevron-container {
+        display: none;
+    }
+
+    /* ===========================
+       Sección Nosotros*/
+    #nosotros {
+        scroll-margin-top: 75px;
+        display: block;
+        padding: 2rem 1rem;
+        background-color: #f9f6f1;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 2rem 0;
+    }
+
+    #nosotros h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    #nosotros p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* ===========================
+       Sección Proyectos*/
+    #proyectos {
+        scroll-margin-top: 75px;
+        display: block;
+        padding: 2rem 1rem;
+        background-color: #f9f6f1;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 2rem 0;
+    }
+
+    .proyecto-destacado {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .proyecto-img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+
+    .proyecto-info {
+        width: 100%;
+    }
+
+    /* ===========================
+       Sección Testimonios*/
+    #testimonios {
+        scroll-margin-top: 75px;
+        display: block;
+        padding: 2rem 1rem;
+        background-color: #f9f6f1;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 2rem 0;
+    }
+
+    #testimonios h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    #testimonios p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* ===========================
+       Sección Cobertura*/
+    #cobertura {
+        scroll-margin-top: 75px;
+        display: block;
+        padding: 2rem 1rem;
+        background-color: #f9f6f1;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 2rem 0;
+    }
+
+    #cobertura h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    #cobertura p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* ===========================
+       Sección Contacto*/
+    #contacto {
+        scroll-margin-top: 75px;
+        display: block;
+        padding: 2rem 1rem;
+        background-color: #f9f6f1;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 2rem 0;
+    }
+
+    #contacto h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    #contacto p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contacto-info-mapa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto-formulario {
+        max-width: 100%;
+        margin-top: 0;
+        padding: 1.5rem;
+    }
+
+    .contacto-datos {
+        width: 90%;
+        max-width: 320px;
+        max-height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contacto-mapa {
+        max-width: 100%;
+        margin-top: 0;
+
+        padding: 0;
+        box-shadow: none;
+        /* opcional, si no quieres sombra */
+        background: none;
+        /* opcional, si no quieres fondo */
+        height: 320px;
+        /* igual que el iframe */
+    }
+
+    .contacto-mapa iframe {
+        height: 100%;
+        width: 100%;
+        border-radius: 12px;
+        /* si quieres bordes redondeados */
+        display: block;
+    }
+
+    .ubicacion-movil {
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #065a5c;
+        margin-bottom: 0rem;
+        padding: auto;
+
+    }
+}
+
+/* Overrides para asegurar que los íconos estén uno al lado del otro */
+.nosotros .tecnologias .tech-list,
+.tecnologias .tech-list {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.6rem !important;       /* separación horizontal entre iconos */
+    padding-top: 0.6rem !important;   /* espacio moderado arriba */
+    padding-bottom: 0.4rem !important;/* espacio moderado abajo */
+    margin: 0 !important;
+}
+
+.nosotros .tecnologias .tech-list .tech-item,
+.tecnologias .tech-list .tech-item {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;   /* evita que cada item tome todo el ancho */
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+}
+
+/* Limitar tamaño de los SVG para que no crezcan y mantengan la fila */
+.nosotros .tecnologias .tech-list .tech-item svg,
+.tecnologias .tech-list .tech-item svg {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 44px;
+    max-height: 44px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ajustes móviles: mantener fila pero con tamaños más pequeños */
+@media (max-width: 768px) {
+    .nosotros .tecnologias .tech-list,
+    .tecnologias .tech-list {
+        gap: 0.5rem !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.4rem !important;
+    }
+    .nosotros .tecnologias .tech-list .tech-item svg,
+    .tecnologias .tech-list .tech-item svg {
+        width: 34px !important;
+        height: 34px !important;
+    }
+}
+
+/* ===========================
+   Animaciones Globales
+=========================== */
+
+/* Animación de entrada para secciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar animación a las secciones */
+#nosotros,
+#proyectos,
+#testimonios,
+#cobertura,
+#contacto {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Mostrar la sección cuando está en el viewport */
+@media (min-width: 768px) {
+    #nosotros,
+    #proyectos,
+    #testimonios,
+    #cobertura,
+    #contacto {
+        opacity: 1;
+        transform: translateY(0);
+        animation: none;
+    }
+}
+
+/* ===========================
+   Fin de los Estilos
+=========================== */
