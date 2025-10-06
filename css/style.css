@@ -416,6 +416,7 @@ vron-link svg {
     /*Nosotros titulo*/
     font-size: 2rem;
     font-weight: 700;
+    margin-top: 2.5rem;    /* <-- espacio extra arriba del título (ajustá a tu gusto) */
     margin-bottom: 20px;
     color: #065a5c;
     text-align: center; /* <-- centrar el título */
