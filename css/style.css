@@ -1367,7 +1367,10 @@ footer a {
 .filosofia-links .linkedin-link {
     font-family: "Lato", sans-serif;
 }
-
+.filosofia-links{
+    padding-top: 1rem;
+    text-align: center;
+}
 /* Asegurar títulos secundarios del sitio mantienen la misma familia */
 #nosotros h2,
 .proyecto-titulo,
