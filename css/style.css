@@ -394,7 +394,7 @@ vron-link svg {
     background-repeat: no-repeat;
     min-height: auto;
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* centrar horizontalmente título y contenido */
     /* <-- cambia esto */
     justify-content: center;
     position: relative;
@@ -1280,6 +1280,7 @@ footer a {
 .sobremi-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center; /* <-- centra imagen + texto en el eje horizontal */
     gap: 1.25rem;
     max-width: 1000px;
     margin: 0.5rem auto; /* menos espacio arriba/abajo */
@@ -1299,28 +1300,7 @@ footer a {
 
 /* Ajustes para texto dentro de sobremi */
 .contenido-nosotros {
-    text-align: left;
-}
-
-/* Responsive: en móviles apilar la imagen encima del texto y centrar */
-@media (max-width: 768px) {
-    .sobremi-wrapper {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0.5rem;
-        margin: 0.5rem auto;
-    }
-
-    .perfil-img {
-        width: 160px;
-        height: 160px;
-        margin-bottom: 0.8rem;
-    }
-
-    .contenido-nosotros {
-        text-align: center;
-    }
+    text-align: center;  /* <-- antes era left, ahora centrado */
 }
 
 /* ===========================
@@ -1333,9 +1313,9 @@ footer a {
     box-sizing: border-box;
     display: flex;
     gap: 1rem;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    align-items: center;           /* <-- centrado horizontal de los hijos */
+    justify-content: center;       /* <-- centra los bloques dentro del contenedor */
+    flex-wrap: wrap;               /* permitir wrap para pantallas pequeñas */
     flex-direction: column; /* apilar verticalmente */
 }
 
