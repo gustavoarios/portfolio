@@ -1297,16 +1297,23 @@ footer a {
     /* menos espacio arriba/abajo */
     padding: 0.75rem 1rem;
     box-sizing: border-box;
+    transform: translateX(-40px);
+    opacity: 0;
+    transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
+    will-change: transform, opacity;
 }
 
-.perfil-img {
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid rgba(37, 211, 102, 0.12);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
-    flex-shrink: 0;
+/* Clase que se añade cuando el elemento está en viewport */
+.sobremi-wrapper.in-view {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* En móviles, usar un desplazamiento menor para evitar recortes */
+@media (max-width: 480px) {
+    .sobremi-wrapper {
+        transform: translateX(-18px);
+    }
 }
 
 /* Ajustes para texto dentro de sobremi */
@@ -1793,3 +1800,29 @@ footer a {
 /* ===========================
    Fin de los Estilos
 =========================== */
+
+/* Forzar tamaño y forma de la foto de perfil para que no se agrande */
+.sobremi-wrapper .perfil-img,
+.perfil-img {
+    width: 190px !important;
+    height: 190px !important;
+    max-width: 190px !important;
+    max-height: 190px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;     /* recorta si la imagen no es cuadrada */
+    flex: 0 0 190px !important;       /* evita que el flex la estire */
+    display: block !important;
+    align-self: center !important;
+}
+
+/* Variante para móviles: imagen más pequeña */
+@media (max-width: 480px) {
+    .sobremi-wrapper .perfil-img,
+    .perfil-img {
+        width: 120px !important;
+        height: 120px !important;
+        max-width: 120px !important;
+        max-height: 120px !important;
+        flex: 0 0 120px !important;
+    }
+}

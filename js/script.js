@@ -128,21 +128,39 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+/* helper: fetch con timeout usando AbortController */
+async function fetchWithTimeout(url, options = {}, timeout = 10000) {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), timeout);
+    try {
+        const resp = await fetch(url, { ...options, signal: controller.signal });
+        clearTimeout(id);
+        return resp;
+    } catch (err) {
+        clearTimeout(id);
+        throw err;
+    }
+}
+
+/* reemplazo del handler de descarga del CV para usar fetchWithTimeout y manejo de errores */
 document.addEventListener("DOMContentLoaded", function () {
     const cvLink = document.getElementById('cv-link');
     if (cvLink) {
         cvLink.addEventListener('click', async function (e) {
-            // Si el navegador soporta download y el archivo es same-origin, el propio atributo puede bastar.
-            // Aquí intentamos forzar la descarga por fetch como respaldo.
             const url = this.getAttribute('href');
             const filename = this.getAttribute('download') || (url ? url.split('/').pop() : 'CV.pdf');
             if (!url) return;
 
             try {
-                // Previene el comportamiento por defecto y fuerza descarga vía Blob
                 e.preventDefault();
-                const resp = await fetch(url, { cache: 'no-store' });
-                if (!resp.ok) throw new Error('Network response not ok');
+                // timeout en ms (ajustá si querés más tiempo)
+                const resp = await fetchWithTimeout(url, { cache: 'no-store' }, 12000);
+                if (!resp.ok) {
+                    // respuesta 4xx/5xx
+                    console.error('Download failed', resp.status, resp.statusText);
+                    alert('No se pudo descargar el archivo (error del servidor). Intenta nuevamente más tarde.');
+                    return;
+                }
                 const blob = await resp.blob();
                 const blobUrl = URL.createObjectURL(blob);
                 const a = document.createElement('a');
@@ -153,9 +171,51 @@ document.addEventListener("DOMContentLoaded", function () {
                 a.remove();
                 URL.revokeObjectURL(blobUrl);
             } catch (err) {
-                // fallback: abrir en nueva pestaña (y dejar que el navegador maneje la descarga si es posible)
-                window.open(url, '_blank', 'noopener');
+                if (err.name === 'AbortError') {
+                    console.error('Request timeout', err);
+                    alert('La descarga tardó demasiado y se canceló. Verifica tu conexión y vuelve a intentar.');
+                } else {
+                    console.error('Download error', err);
+                    alert('Ocurrió un error al intentar descargar el archivo. Revisa la consola para más detalles.');
+                    // fallback: abrir en nueva pestaña por si el navegador puede manejarlo
+                    try { window.open(url, '_blank', 'noopener'); } catch (e) { /* noop */ }
+                }
             }
         });
+    }
+});
+
+// Animación on-scroll para .sobremi-wrapper (IntersectionObserver + fallback)
+document.addEventListener('DOMContentLoaded', function () {
+    const target = document.querySelector('.sobremi-wrapper');
+    if (!target) return;
+
+    function markInView() {
+        target.classList.add('in-view');
+    }
+
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    markInView();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 }); // 20% visible
+        io.observe(target);
+    } else {
+        // Fallback simple: on scroll check bounding rect
+        function onScrollCheck() {
+            const rect = target.getBoundingClientRect();
+            const vh = window.innerHeight || document.documentElement.clientHeight;
+            if (rect.top <= vh * 0.85) {
+                markInView();
+                window.removeEventListener('scroll', onScrollCheck);
+            }
+        }
+        window.addEventListener('scroll', onScrollCheck, { passive: true });
+        // comprobar inmediatamente en caso de que ya esté visible
+        onScrollCheck();
     }
 });
