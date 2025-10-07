@@ -12,16 +12,65 @@ body {
 }
 
 /* Clases para fuente Lato */
-.lato-thin { font-family: "Lato", sans-serif; font-weight: 100; font-style: normal; }
-.lato-light { font-family: "Lato", sans-serif; font-weight: 300; font-style: normal; }
-.lato-regular { font-family: "Lato", sans-serif; font-weight: 400; font-style: normal; }
-.lato-bold { font-family: "Lato", sans-serif; font-weight: 700; font-style: normal; }
-.lato-black { font-family: "Lato", sans-serif; font-weight: 900; font-style: normal; }
-.lato-thin-italic { font-family: "Lato", sans-serif; font-weight: 100; font-style: italic; }
-.lato-light-italic { font-family: "Lato", sans-serif; font-weight: 300; font-style: italic; }
-.lato-regular-italic { font-family: "Lato", sans-serif; font-weight: 400; font-style: italic; }
-.lato-bold-italic { font-family: "Lato", sans-serif; font-weight: 700; font-style: italic; }
-.lato-black-italic { font-family: "Lato", sans-serif; font-weight: 900; font-style: italic; }
+.lato-thin {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.lato-thin-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.lato-light-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.lato-bold-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.lato-black-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
 
 /* ===========================
    Header / Navbar
@@ -154,7 +203,7 @@ section {
     z-index: 0;
 }
 
-.hero-section > .container {
+.hero-section>.container {
     position: relative;
     z-index: 1;
     max-width: 100%;
@@ -234,8 +283,15 @@ section {
 
 /* Animaciones */
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
 }
 
 @keyframes heroFadeInUp {
@@ -243,6 +299,7 @@ section {
         opacity: 0;
         transform: translateY(80px) scale(0.98);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -559,7 +616,7 @@ section {
     z-index: 0;
 }
 
-#cobertura > * {
+#cobertura>* {
     position: relative;
     z-index: 1;
 }
@@ -612,6 +669,7 @@ section {
     cursor: pointer;
     transition: background 0.2s, color 0.2s, border 0.2s;
     outline: none;
+    text-align: center; /* Agregar esta línea */
 }
 
 .btn-cobertura.active,
@@ -958,16 +1016,36 @@ footer a {
     }
 
     .sobremi-wrapper {
-        transform: translateX(-18px);
+        /* transform: translateX(-18px); */
+        transform: translateX(0);
+        /* Remover el translateX para móviles */
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
     }
 
     .sobremi-wrapper .perfil-img,
     .perfil-img {
-        width: 120px !important;
+        /* width: 120px !important;
         height: 120px !important;
         max-width: 120px !important;
         max-height: 120px !important;
-        flex: 0 0 120px !important;
+        flex: 0 0 120px !important; */
+        order: 1; /* Foto primero después del título */
+        width: 140px !important;
+        height: 140px !important;
+        max-width: 140px !important;
+        max-height: 140px !important;
+        flex: 0 0 140px !important;
+        margin: 0 auto 1rem auto;
+        align-self: center !important; /* Centrar en el contenedor flex */
+
+    }
+
+    .sobremi-wrapper .sobremi-texto,
+    .sobremi-wrapper p {
+        order: 2; /* Texto después de la foto */
+        width: 100%;
     }
 
     .filosofia .filosofia-links {
@@ -990,7 +1068,7 @@ footer a {
         padding-bottom: 2rem;
     }
 
-    .hero-section > .container {
+    .hero-section>.container {
         padding: 2rem 1rem;
         max-width: 100%;
         width: 100%;
@@ -1123,6 +1201,36 @@ footer a {
         max-width: 320px;
         max-height: fit-content;
         margin: 0 auto;
+    }
+
+    /* Reorganizar estructura de "sobre mí" para móviles */
+    .sobremi-wrapper {
+        flex-direction: column;
+        text-align: center;
+        transform: translateX(0);
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .sobremi-wrapper .perfil-img,
+    .perfil-img {
+        order: 1;
+        /* Foto después del título */
+        margin-right: 0;
+        margin: 0 auto 1rem auto; /* Centrar horizontalmente */
+        align-self: center !important; /* Centrar en el contenedor flex */
+
+    }
+    .sobremi-wrapper .sobremi-texto,
+    .sobremi-wrapper p {
+        order: 2; /* Texto después de la foto */
+        width: 100%;
+    }
+
+    .sobremi-wrapper .sobremi-texto {
+        order: 2;
+        /* Texto después de la foto */
+        width: 100%;
     }
 }
 
