@@ -12,72 +12,22 @@ body {
 }
 
 /* Clases para fuente Lato */
-.lato-thin {
-    font-family: "Lato", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-}
-
-.lato-light {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.lato-regular {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.lato-bold {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.lato-black {
-    font-family: "Lato", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-}
-
-.lato-thin-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-}
-
-.lato-light-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.lato-regular-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.lato-bold-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-}
-
-.lato-black-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-}
+.lato-thin { font-family: "Lato", sans-serif; font-weight: 100; font-style: normal; }
+.lato-light { font-family: "Lato", sans-serif; font-weight: 300; font-style: normal; }
+.lato-regular { font-family: "Lato", sans-serif; font-weight: 400; font-style: normal; }
+.lato-bold { font-family: "Lato", sans-serif; font-weight: 700; font-style: normal; }
+.lato-black { font-family: "Lato", sans-serif; font-weight: 900; font-style: normal; }
+.lato-thin-italic { font-family: "Lato", sans-serif; font-weight: 100; font-style: italic; }
+.lato-light-italic { font-family: "Lato", sans-serif; font-weight: 300; font-style: italic; }
+.lato-regular-italic { font-family: "Lato", sans-serif; font-weight: 400; font-style: italic; }
+.lato-bold-italic { font-family: "Lato", sans-serif; font-weight: 700; font-style: italic; }
+.lato-black-italic { font-family: "Lato", sans-serif; font-weight: 900; font-style: italic; }
 
 /* ===========================
    Header / Navbar
 =========================== */
 header {
     background-color: #000000 !important;
-    /* <- agregamos !important para forzar el cambio */
     color: #000000;
     padding: 0;
     text-align: center;
@@ -85,6 +35,40 @@ header {
     top: 0;
     z-index: 1030;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+header .navbar {
+    background-color: transparent;
+}
+
+header .navbar-collapse {
+    justify-content: center !important;
+}
+
+header .navbar-nav .nav-item {
+    margin: 0 0.2rem;
+}
+
+header .navbar-brand img {
+    max-height: 60px;
+    padding-left: 4rem;
+}
+
+header .nav-link {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    color: #CCCCCC;
+    transition: color 0.3s;
+    font-size: 1.2rem;
+}
+
+header .nav-link:hover {
+    color: #25D366;
+}
+
+header .nav-link.active {
+    color: #f9f6f1;
+    font-weight: 600;
 }
 
 .menu-centrado {
@@ -95,75 +79,7 @@ header {
     height: 100%;
 }
 
-/* Navbar interno, opcional si querés más control */
-header .navbar {
-    background-color: transparent;
-    /* ya lo pintamos en el header */
-}
-
-/* Navbar centrado */
-header .navbar-collapse {
-    justify-content: center !important;
-    /* centra horizontalmente los links */
-}
-
-/* Opcional: espacio entre links */
-header .navbar-nav .nav-item {
-    margin: 0 0.2rem;
-    /* ajusta el espacio entre links */
-}
-
-/* Logo del header */
-header .navbar-brand img {
-    /* tamaño del logo */
-    max-height: 60px;
-    padding-left: 4rem;
-    /*CON ESTO MOVEMOS EL LOGO EN SENTIDO HORIZONTAL*/
-
-
-
-}
-
-/*colores*/
-/*color nombre profesional: #065a5c*/
-/*color logo diente: #8474A1*/
-/*color fondo header: #f9f6f1*/
-/*color links header: #212529*/
-/*color fondo secciones: #053D58*/
-
-/* Links del header */
-header .nav-link {
-    font-family: "Lato", sans-serif;
-    font-weight: 500;
-    color: #CCCCCC;
-    transition: color 0.3s;
-    font-size: 1.2rem;
-    /* <- ajusta este valor al tamaño que quieras */
-    ;
-}
-
-/* Hover sobre links */
-header .nav-link:hover {
-    /* color: #8474A1; */
-    color: #25D366;
-}
-
-/* Link activo */
-header .nav-link.active {
-    color: #f9f6f1;
-    font-weight: 600;
-}
-
-/* Títulos dentro del header */
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-header p {
-    font-size: 1.2rem;
-}
-
+/* Botón WhatsApp */
 .whatsapp-btn {
     position: absolute;
     right: 40px;
@@ -195,30 +111,28 @@ header p {
     display: inline-block;
 }
 
-/* Ocultar por defecto el botón móvil en escritorio */
 .mobile-only {
     display: none;
 }
 
-/* Mostrar por defecto el botón escritorio */
 .desktop-only {
     display: inline-block;
 }
 
+/* ===========================
+   Secciones Generales
+=========================== */
 section {
-    /* ... */
     background: #fff;
-    /* obligatorio para que se vea la sombra */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* sombra suave debajo */
     border-radius: 5px;
-    /* opcional, bordes redondeados */
     padding: 40px 0;
 }
 
-/* Hero Section */
+/* ===========================
+   Hero Section
+=========================== */
 .hero-section {
-    /* background-image: url('../img/consultorio.jpg'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -226,14 +140,12 @@ section {
     min-height: 95vh;
     display: flex;
     align-items: center;
-    /* Centramos verticalmente */
     justify-content: center;
     position: relative;
     padding: 2rem;
     color: white;
 }
 
-/* Overlay */
 .hero-section::before {
     content: "";
     position: absolute;
@@ -242,21 +154,15 @@ section {
     z-index: 0;
 }
 
-/* Contenedor */
-.hero-section>.container {
-
+.hero-section > .container {
     position: relative;
     z-index: 1;
     max-width: 100%;
     width: 100%;
     padding: 0 2rem;
     transform: translateY(-50px);
-
 }
 
-
-
-/* Alineación centrada */
 .texto-izquierda {
     text-align: center;
     margin-left: auto;
@@ -266,46 +172,32 @@ section {
     padding-right: 3rem;
 }
 
-/* Títulos */
 .bloque-titulo {
     margin-bottom: 2rem;
-    /* Separación entre h1 y p */
 }
 
-/*TEXTO PRINCIPAL, ACA SE ARREGLA*/
 .hero-section h1.linea-hero {
     font-size: 3.5rem !important;
-    /* <-- AQUÍ cambias el tamaño del H1 */
     font-weight: 700;
     line-height: 0.9 !important;
     margin-bottom: 0.2rem;
-
 }
 
-/*TEXTO SECUNDARIO, ACA SE ARREGLA*/
 .bloque-parrafo {
     font-size: 1.2rem !important;
-    /* <-- AQUÍ cambias el tamaño del párrafo */
     font-weight: 500;
     line-height: 1.4 !important;
 }
 
-
-
-/* Línea decorativa */
 .linea-decorativa {
     width: 100%;
     max-width: 500px;
     height: 7px;
     background-color: #25D366;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2.5rem auto;
     transition: all 0.3s ease;
 }
 
-/* Botón centrado */
 .boton-consulta {
     width: 100%;
     text-align: center;
@@ -318,7 +210,6 @@ section {
     border-radius: 5px;
 }
 
-
 /* Flecha SVG */
 .chevron-container {
     position: absolute;
@@ -326,11 +217,9 @@ section {
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-
 }
 
 .chevron-svg {
-
     width: 60px;
     height: 60px;
     fill: white;
@@ -343,23 +232,10 @@ section {
     text-decoration: none;
 }
 
-vron-link svg {
-    width: 40px;
-    height: 40px;
-    animation: bounce 2s infinite;
-}
-
-/* Animación de rebote */
+/* Animaciones */
 @keyframes bounce {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
 }
 
 @keyframes heroFadeInUp {
@@ -367,7 +243,6 @@ vron-link svg {
         opacity: 0;
         transform: translateY(80px) scale(0.98);
     }
-
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -388,8 +263,6 @@ vron-link svg {
    Sección Nosotros
 =========================== */
 #nosotros {
-
-
     background-color: #CCCCCC;
     background-size: cover;
     background-position: center;
@@ -397,47 +270,32 @@ vron-link svg {
     min-height: auto;
     display: flex;
     align-items: center;
-    /* centrar horizontalmente título y contenido */
-    /* <-- cambia esto */
     justify-content: center;
     position: relative;
-    padding: 1.5rem 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    /* opcional: ajustá el espacio superior de NOSOTROS*/
+    padding: 2rem 1rem;
     color: white;
     overflow: hidden;
     scroll-margin-top: 65px;
-    /* Ajustá este valor según la altura del header */
     width: 100%;
     flex-direction: column;
-
 }
 
-
 #nosotros h2 {
-    /*Nosotros titulo*/
     font-size: 2rem;
     font-weight: 700;
-    margin-top: 2.5rem;
-    /* <-- espacio extra arriba del título (ajustá a tu gusto) */
-    margin-bottom: 20px;
+    margin: 2.5rem 0 20px 0;
     color: #065a5c;
     text-align: center;
-    /* <-- centrar el título */
 }
 
 #nosotros p {
-    /*Nosotros parrafo debajo de titulo NOSOTROS*/
     font-size: 1.1rem;
     margin: 0 auto;
     line-height: 1.6;
     font-weight: 400;
     color: #212529;
-
     max-width: 1000px;
 }
-
 
 .contenido-nosotros {
     text-align: center;
@@ -445,13 +303,128 @@ vron-link svg {
     margin: 0 auto;
 }
 
-.equipo-nosotros {
+/* Sobre mí: foto + texto */
+.sobremi-wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
     max-width: 1000px;
-    margin: 0 auto;
-    padding-top: 2rem;
+    margin: 0.5rem auto;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    transform: translateX(-40px);
+    opacity: 0;
+    transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
+    will-change: transform, opacity;
+}
+
+.sobremi-wrapper.in-view {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Foto de perfil */
+.sobremi-wrapper .perfil-img,
+.perfil-img {
+    width: 190px !important;
+    height: 190px !important;
+    max-width: 190px !important;
+    max-height: 190px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    flex: 0 0 190px !important;
+    display: block !important;
+    align-self: center !important;
+}
+
+/* ===========================
+   Nosotros - Tecnologías y Filosofía
+=========================== */
+.nosotros-extra {
+    max-width: 1000px;
+    margin: 0.75rem auto 1.5rem auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.tecnologias,
+.filosofia {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    color: #212529;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tecnologias h3,
+.filosofia h3 {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    color: #065a5c;
+}
+
+/* Lista de tecnologías */
+.tecnologias .tech-list {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.tecnologias .tech-list .tech-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.tecnologias .tech-list .tech-item svg {
+    width: 54px !important;
+    height: 54px !important;
+    max-width: 54px !important;
+    max-height: 54px !important;
+    display: block !important;
+    flex: 0 0 54px !important;
+}
+
+.tecnologias .tech-list .tech-item svg * {
+    vector-effect: non-scaling-stroke;
+}
+
+.filosofia-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.filosofia .filosofia-links .btn-cobertura,
+.filosofia .filosofia-links a {
+    white-space: nowrap;
+}
+
+.filosofia-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.filosofia-links a:hover {
+    text-decoration: none;
 }
 
 /* ===========================
@@ -465,22 +438,18 @@ vron-link svg {
     min-height: 100vh;
     display: flex;
     align-items: flex-start;
-    /* <-- cambia esto */
     justify-content: center;
     position: relative;
     padding: 2rem;
     padding-top: 3rem;
-    /* opcional: ajustá el espacio superior de NOSOTROS*/
     color: white;
     overflow: hidden;
     scroll-margin-top: 85px;
-    /* Ajustá este valor según la altura del header */
     width: 100%;
     flex-direction: column;
 }
 
 #proyectos h2 {
-    /*Proyectos titulo*/
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -488,28 +457,26 @@ vron-link svg {
 }
 
 #proyectos p {
-    /*Proyectos parrafo debajo de titulo PROYECTOS*/
     font-size: 1.1rem;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     line-height: 1.6;
     font-weight: 400;
     color: #CCCCCC;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
     max-width: 1000px;
 }
 
-/* Bloque destacado de Proyecto Principal */
+.contenido-proyectos {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 .proyecto-destacado-wrapper {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto 2em auto;
+    margin: 0 auto 2rem auto;
     display: flex;
     justify-content: center;
-    margin-bottom: 0em;
-    /* probá con 0.5em o 0 si querés menos espacio */
 }
 
 .proyecto-destacado {
@@ -525,7 +492,6 @@ vron-link svg {
     align-items: center;
     text-align: left;
     transition: transform 0.2s, box-shadow 0.2s;
-    margin-bottom: 2rem;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
@@ -564,68 +530,8 @@ vron-link svg {
     font-weight: 400 !important;
 }
 
-/*cards proyectos*/
-.contenido-proyectos {
-    text-align: center;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.equipo-proyectos {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-top: 2rem;
-}
-
 /* ===========================
-   Sección Testimonios
-=========================== */
-#testimonios {
-    background-color: #fff;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    padding: 2rem;
-    padding-top: 3rem;
-    color: #212529;
-    overflow: hidden;
-    scroll-margin-top: 85px;
-    width: 100%;
-    flex-direction: column;
-}
-
-#testimonios h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #065a5c;
-}
-
-#testimonios p {
-    font-size: 1.1rem;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-weight: 400;
-    color: #212529;
-    max-width: 1000px;
-}
-
-.contenido-testimonios {
-    text-align: center;
-    max-width: 100%;
-    margin: 0 auto 1rem auto;
-}
-
-/* ===========================
-   Sección Cobertura
+   Sección Cobertura/Educación
 =========================== */
 #cobertura {
     background-color: #fff;
@@ -634,16 +540,13 @@ vron-link svg {
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-start;
-    /* <-- cambia esto */
     justify-content: center;
     position: relative;
     padding: 2rem;
     padding-top: 3rem;
-    /* opcional: ajustá el espacio superior de COBERTURA*/
     color: white;
     overflow: hidden;
     scroll-margin-top: 85px;
-    /* Ajustá este valor según la altura del header */
     width: 100%;
     flex-direction: column;
 }
@@ -653,17 +556,15 @@ vron-link svg {
     position: absolute;
     inset: 0;
     background-color: rgba(255, 255, 255, 0.85);
-    /* Ajustá la opacidad y color para la transparencia */
     z-index: 0;
 }
 
-#cobertura>* {
+#cobertura > * {
     position: relative;
     z-index: 1;
 }
 
 #cobertura h2 {
-    /*Cobertura titulo*/
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -671,49 +572,28 @@ vron-link svg {
 }
 
 #cobertura p {
-    /*Cobertura parrafo debajo de titulo COBERTURA*/
     font-size: 1.1rem;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     line-height: 1.6;
     font-weight: 400;
     color: #212529;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
     max-width: 1000px;
 }
 
-.cobertura-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
+.contenido-cobertura {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #212529;
 }
 
-.cobertura-header span {
-    width: 16px;
-    height: 16px;
-    background: #FFC400;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.cobertura-descripcion p {
-    color: #065a5c;
-    font-size: 1.1rem;
-    margin-bottom: 0;
-}
-
-.cobertura-descripcion em {
-    font-size: 0.95rem;
-    color: #666;
+.contenido-cobertura p {
+    margin-bottom: 0.5rem !important;
 }
 
 .cobertura-botones {
     display: flex;
     justify-content: center;
-    margin: 1rem 0 0 0;
     align-items: center;
     gap: 1.5rem;
     width: 100%;
@@ -735,50 +615,120 @@ vron-link svg {
 }
 
 .btn-cobertura.active,
-.btn-cobertura:focus {
-    background: #22c55e;
-    color: #ffffff;
-    border-color: #22c55e;
-}
-
+.btn-cobertura:focus,
 .btn-cobertura:hover {
     background: #22c55e;
     color: #ffffff;
     border-color: #22c55e;
 }
 
-.cobertura-contenidos {
+/* Estilos para las cards de educación */
+.educacion-contenido {
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 2rem auto 0;
 }
 
-.cobertura-contenidos.activo {
-    max-height: 2000px;
-    /* Un valor suficientemente grande para el contenido */
+.educacion-destacado-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    justify-content: center;
 }
 
-.contenido-cobertura {
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #212529;
-    margin-bottom: 0em;
-    margin: 0 auto;
+.educacion-destacado-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
 }
 
-/* Elimina el espacio entre los p de .contenido-cobertura */
-.contenido-cobertura p {
-    margin-bottom: 0.5rem !important;
+.educacion-destacado-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
 
+.educacion-destacado {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    padding: 2.5rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.educacion-destacado:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.educacion-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    margin-right: 2rem;
+    object-fit: cover;
+    background: #f0f0f0;
+    border: 2px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.educacion-info {
+    flex: 1;
+}
+
+.educacion-titulo {
+    color: #065a5c;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.educacion-institucion {
+    color: #22c55e;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.educacion-descripcion {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.educacion-estado {
+    display: flex;
+    align-items: center;
+}
+
+.estado-badge {
+    background: #22c55e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.estado-badge.completado {
+    background: #065a5c;
 }
 
 /* ===========================
    Sección Contacto
 =========================== */
-
 #contacto {
     background-color: #000000;
     display: flex;
@@ -786,12 +736,10 @@ vron-link svg {
     align-items: flex-start;
     justify-content: center;
     position: relative;
-    padding: 2rem 0 2rem 0;
-    padding-top: 3rem;
+    padding: 3rem 0 2rem 0;
     overflow: hidden;
     scroll-margin-top: 85px;
     width: 100%;
-    flex-direction: column;
 }
 
 #contacto h2 {
@@ -827,10 +775,8 @@ vron-link svg {
     margin-top: 2rem;
     flex-wrap: wrap;
     max-width: 1200px;
-    /* o el valor que prefieras */
     width: 100%;
-    margin: 0 auto;
-
+    margin: 2rem auto 0;
 }
 
 .contacto-datos {
@@ -839,16 +785,13 @@ vron-link svg {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     padding: 24px;
-    margin-top: 2rem;
 }
 
 .contacto-datos h3 {
     color: #065a5c;
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    text-align: left;
     text-align: center;
-
 }
 
 .contacto-datos p {
@@ -867,7 +810,6 @@ vron-link svg {
     font-weight: 700;
 }
 
-/* Estilos para el formulario de contacto */
 .contacto-formulario {
     flex: 2 1 400px;
     min-width: 280px;
@@ -876,7 +818,6 @@ vron-link svg {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     padding: 24px;
-    margin-top: 2rem;
 }
 
 .contacto-formulario h3 {
@@ -959,23 +900,20 @@ footer {
     text-align: center;
 }
 
-/* Links del footer */
 footer a {
     color: #0d6efd;
     text-decoration: none;
 }
 
+/* ===========================
+   MEDIA QUERIES RESPONSIVE
+=========================== */
 
-
-/* ============================ */
-/* Estilos Responsive para Móviles */
-/* ============================ */
+/* Móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
     header .navbar-brand img {
         padding-left: 1rem;
         max-height: 50px;
-        /* Reducir de 60px a 40px en móviles */
-        position: center;
     }
 
     .menu-centrado {
@@ -995,7 +933,6 @@ footer a {
 
     header .navbar-nav .nav-item {
         margin: 0.1rem 0;
-        /* más pegadas */
     }
 
     .whatsapp-btn {
@@ -1009,7 +946,6 @@ footer a {
 
     .whatsapp-btn .whatsapp-text {
         display: inline-block;
-        /* o block si preferís que esté debajo del ícono */
     }
 
     .desktop-only {
@@ -1019,22 +955,42 @@ footer a {
     .mobile-only {
         display: block;
         margin-top: 2rem;
-        /* esto lo baja suavemente */
+    }
+
+    .sobremi-wrapper {
+        transform: translateX(-18px);
+    }
+
+    .sobremi-wrapper .perfil-img,
+    .perfil-img {
+        width: 120px !important;
+        height: 120px !important;
+        max-width: 120px !important;
+        max-height: 120px !important;
+        flex: 0 0 120px !important;
+    }
+
+    .filosofia .filosofia-links {
+        gap: 0.5rem;
+    }
+
+    .tecnologias .tech-list .tech-item svg {
+        width: 40px !important;
+        height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
+        flex: 0 0 40px !important;
     }
 }
 
-
-/* ============================ */
-/* Estilos Responsive para Tablets */
-/* ============================ */
+/* Tablets y móviles grandes (hasta 768px) */
 @media (max-width: 768px) {
-
     .hero-section {
         padding-top: 3rem;
         padding-bottom: 2rem;
     }
 
-    .hero-section>.container {
+    .hero-section > .container {
         padding: 2rem 1rem;
         max-width: 100%;
         width: 100%;
@@ -1044,33 +1000,24 @@ footer a {
 
     .hero-section h1.linea-hero {
         font-size: 2.5rem !important;
-        /* <-- Tamaño del H1 en móviles */
         line-height: 1.1 !important;
         text-align: left;
-        margin-top: 0rem;
-        margin-bottom: 0rem;
+        margin: 0;
     }
 
     .bloque-parrafo {
         font-size: 1rem !important;
-        /* <-- Tamaño del párrafo en móviles */
         text-align: left;
-        margin-top: 0rem;
-        margin-bottom: 4rem;
+        margin: 0 0 4rem 0;
     }
 
     .texto-izquierda {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 1rem;
         text-align: center;
     }
 
     .linea-decorativa {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        margin-top: 3rem;
-        margin-bottom: 4rem;
+        margin: 3rem auto 4rem auto;
     }
 
     .boton-consulta {
@@ -1080,31 +1027,6 @@ footer a {
 
     .boton-consulta .btn {
         margin-right: 0;
-    }
-
-    .desktop-only {
-        display: none;
-    }
-
-    .mobile-only {
-        display: block;
-        width: 100%;
-    }
-
-    .whatsapp-btn {
-        position: static;
-        margin-top: 1rem;
-        justify-content: center;
-        width: auto;
-    }
-
-    .whatsapp-btn .whatsapp-text {
-        display: inline-block;
-    }
-
-
-    .chevron {
-        font-size: 2rem;
     }
 
     .chevron-container {
@@ -1117,21 +1039,14 @@ footer a {
         height: 60px;
     }
 
-    /* ===========================
-       Sección Nosotros*/
-    #nosotros {
+    /* Secciones */
+    #nosotros,
+    #proyectos {
         scroll-margin-top: 75px;
     }
 
     #nosotros p {
         font-size: 1rem;
-        /* o probá con 0.9rem si querés más chico */
-    }
-
-    /* ===========================
-       Sección Proyectos*/
-    #proyectos {
-        scroll-margin-top: 75px;
     }
 
     .proyecto-destacado {
@@ -1139,23 +1054,12 @@ footer a {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        text-decoration: none;
-        color: inherit;
-    }
-
-    .proyecto-destacado:hover {
-        text-decoration: none;
-        color: inherit;
     }
 
     .proyecto-img {
         width: 100%;
         max-width: 220px;
-        /* Ajusta el tamaño máximo si lo deseas */
         margin-bottom: 16px;
-
-        /*centrado de la imagen*/
-
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -1165,24 +1069,7 @@ footer a {
         width: 100%;
     }
 
-    .animate-up {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
-    }
-
-
-
-    /* ===========================
-       Sección Cobertura*/
-
-    #cobertura {
-
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-    }
-
+    /* Cobertura/Educación */
     .cobertura-botones {
         display: flex;
         flex-direction: column;
@@ -1194,7 +1081,6 @@ footer a {
         width: 100%;
     }
 
-    /* Cards de educación responsive */
     .educacion-destacado {
         padding: 1.5rem;
         text-align: center;
@@ -1220,485 +1106,7 @@ footer a {
         font-size: 1em;
     }
 
-    /* ===========================
-       Sección Contacto*/
-
-    .contacto-info-mapa {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contacto-formulario {
-        max-width: 100%;
-        margin-top: 1rem;
-    }
-
-    .contacto-datos {
-        width: 90%;
-        max-width: 320px;
-        max-height: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .contacto-info-mapa {
-        flex-direction: column;
-        /* columna en pantallas chicas */
-        align-items: center;
-    }
-
-    .contacto-formulario {
-        max-width: 100%;
-        margin-top: 0;
-        padding: 1.5rem;
-    }
-
-    .contacto-mapa {
-        max-width: 100%;
-        margin-top: 0;
-
-        padding: 0;
-        box-shadow: none;
-        /* opcional, si no quieres sombra */
-        background: none;
-        /* opcional, si no quieres fondo */
-        height: 320px;
-        /* igual que el iframe */
-    }
-
-    .contacto-mapa iframe {
-        height: 100%;
-        width: 100%;
-        border-radius: 12px;
-        /* si quieres bordes redondeados */
-        display: block;
-    }
-
-    .ubicacion-movil {
-        display: block;
-        text-align: center;
-        font-size: 1.5rem;
-        color: #065a5c;
-        margin-bottom: 0rem;
-        padding: auto;
-
-    }
-}
-
-/* Sobre mí: foto + texto */
-.sobremi-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* <-- centra imagen + texto en el eje horizontal */
-    gap: 1.25rem;
-    max-width: 1000px;
-    margin: 0.5rem auto;
-    /* menos espacio arriba/abajo */
-    padding: 0.75rem 1rem;
-    box-sizing: border-box;
-    transform: translateX(-40px);
-    opacity: 0;
-    transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
-    will-change: transform, opacity;
-}
-
-/* Clase que se añade cuando el elemento está en viewport */
-.sobremi-wrapper.in-view {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-/* En móviles, usar un desplazamiento menor para evitar recortes */
-@media (max-width: 480px) {
-    .sobremi-wrapper {
-        transform: translateX(-18px);
-    }
-}
-
-/* Ajustes para texto dentro de sobremi */
-.contenido-nosotros {
-    text-align: center;
-    /* <-- antes era left, ahora centrado */
-}
-
-/* ===========================
-   Nosotros - Tecnologías y Filosofía
-=========================== */
-.nosotros-extra {
-    max-width: 1000px;
-    margin: 0.75rem auto 1.5rem auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    /* <-- centrado horizontal de los hijos */
-    justify-content: center;
-    /* <-- centra los bloques dentro del contenedor */
-    flex-wrap: wrap;
-    /* permitir wrap para pantallas pequeñas */
-    flex-direction: column;
-    /* apilar verticalmente */
-}
-
-/* Reemplazar reglas de card para que no estén limitadas por fondo blanco/sombra */
-.tecnologias,
-.filosofia {
-    background: transparent;
-    /* quitar fondo blanco */
-    border-radius: 0;
-    /* quitar bordes redondeados */
-    padding: 0;
-    /* eliminar padding tipo card */
-    box-shadow: none;
-    /* quitar sombra */
-    color: #212529;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Centrar títulos de Tecnologías y Filosofía */
-.tecnologias h3,
-.filosofia h3 {
-    text-align: center;
-    font-family: "Lato", sans-serif;
-    /* usar la misma fuente del proyecto */
-    font-weight: 700;
-    /* coherente con otros títulos */
-    color: #065a5c;
-}
-
-/* Badges, textos y enlaces secundarios usan la misma familia */
-.tech-item,
-.filosofia-text,
-.filosofia-links .cv-link,
-.filosofia-links .linkedin-link {
-    font-family: "Lato", sans-serif;
-}
-
-.filosofia-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    /* separación horizontal entre los dos botones */
-    padding-top: 1rem;
-    /* ya existía, se mantiene */
-    flex-wrap: wrap;
-    /* evita overflow en pantallas pequeñas */
-}
-
-/* Asegurar que los botones mantengan su tamaño y no se estiren */
-.filosofia .filosofia-links .btn-cobertura,
-.filosofia .filosofia-links a {
-    white-space: nowrap;
-}
-
-.filosofia-links a {
-    text-decoration: none;
-    /* quita el subrayado */
-    color: inherit;
-    /* mantiene el color del texto */
-}
-
-.filosofia-links a:hover {
-    text-decoration: none;
-    /* evita que vuelva en hover */
-}
-
-/* Ajuste en móviles: reducir la separación */
-@media (max-width: 480px) {
-    .filosofia .filosofia-links {
-        gap: 0.5rem;
-    }
-}
-
-/* Asegurar títulos secundarios del sitio mantienen la misma familia */
-#nosotros h2,
-.proyecto-titulo,
-.educacion-titulo {
-    font-family: "Lato", sans-serif;
-}
-
-/* Estilos para las cards de educación */
-.educacion-contenido {
-    width: 100%;
-    max-width: 1200px;
-    margin: 2rem auto 0;
-}
-
-.educacion-destacado-wrapper {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto 2rem auto;
-    display: flex;
-    justify-content: center;
-}
-
-/* Link wrapper para certificaciones */
-.educacion-destacado-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    width: 100%;
-}
-
-.educacion-destacado-link:hover {
-    text-decoration: none;
-    color: inherit;
-}
-
-.educacion-destacado {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
-    padding: 2.5rem;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
-}
-
-.educacion-destacado:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* Imagen para certificaciones */
-.educacion-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
-    margin-right: 2rem;
-    object-fit: cover;
-    background: #f0f0f0;
-    border: 2px solid #e0e0e0;
-    flex-shrink: 0;
-}
-
-.educacion-info {
-    flex: 1;
-}
-
-.educacion-titulo {
-    color: #065a5c;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.6em;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-}
-
-.educacion-institucion {
-    color: #22c55e;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2em;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.educacion-descripcion {
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.educacion-estado {
-    display: flex;
-    align-items: center;
-}
-
-.estado-badge {
-    background: #22c55e;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    display: inline-block;
-}
-
-.estado-badge.completado {
-    background: #065a5c;
-}
-
-/* ===========================
-   Estilos Responsive Avanzados
-=========================== */
-
-/* Ocultar secciones por defecto en móviles */
-@media (max-width: 768px) {
-
-    #nosotros,
-    #proyectos,
-    #testimonios,
-    #cobertura,
-    #contacto {
-        display: none;
-    }
-
-    /* Mostrar solo el título y el botón de WhatsApp en la sección de inicio */
-    .hero-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 4rem 1rem;
-    }
-
-    .hero-section h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .hero-section p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-    }
-
-    .whatsapp-btn {
-        position: static;
-        margin: 1rem 0;
-        width: 80%;
-        max-width: 300px;
-        padding: 0.7em;
-        font-size: 1.1em;
-        border-radius: 50px;
-    }
-
-    .whatsapp-btn img {
-        width: 24px;
-        height: 24px;
-        margin-right: 0.5em;
-    }
-
-    /* Chevron en la sección de inicio */
-    .chevron-container {
-        display: none;
-    }
-
-    /* ===========================
-       Sección Nosotros*/
-    #nosotros {
-        scroll-margin-top: 75px;
-        display: block;
-        padding: 2rem 1rem;
-        background-color: #f9f6f1;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        margin: 2rem 0;
-    }
-
-    #nosotros h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-
-    #nosotros p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    /* ===========================
-       Sección Proyectos*/
-    #proyectos {
-        scroll-margin-top: 75px;
-        display: block;
-        padding: 2rem 1rem;
-        background-color: #f9f6f1;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        margin: 2rem 0;
-    }
-
-    .proyecto-destacado {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .proyecto-img {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 1rem;
-    }
-
-    .proyecto-info {
-        width: 100%;
-    }
-
-    /* ===========================
-       Sección Testimonios*/
-    #testimonios {
-        scroll-margin-top: 75px;
-        display: block;
-        padding: 2rem 1rem;
-        background-color: #f9f6f1;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        margin: 2rem 0;
-    }
-
-    #testimonios h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-
-    #testimonios p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    /* ===========================
-       Sección Cobertura*/
-    #cobertura {
-        scroll-margin-top: 75px;
-        display: block;
-        padding: 2rem 1rem;
-        background-color: #f9f6f1;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        margin: 2rem 0;
-    }
-
-    #cobertura h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-
-    #cobertura p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    /* ===========================
-       Sección Contacto*/
-    #contacto {
-        scroll-margin-top: 75px;
-        display: block;
-        padding: 2rem 1rem;
-        background-color: #f9f6f1;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        margin: 2rem 0;
-    }
-
-    #contacto h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-
-    #contacto p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
+    /* Contacto */
     .contacto-info-mapa {
         flex-direction: column;
         align-items: center;
@@ -1714,115 +1122,10 @@ footer a {
         width: 90%;
         max-width: 320px;
         max-height: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .contacto-mapa {
-        max-width: 100%;
-        margin-top: 0;
-
-        padding: 0;
-        box-shadow: none;
-        /* opcional, si no quieres sombra */
-        background: none;
-        /* opcional, si no quieres fondo */
-        height: 320px;
-        /* igual que el iframe */
-    }
-
-    .contacto-mapa iframe {
-        height: 100%;
-        width: 100%;
-        border-radius: 12px;
-        /* si quieres bordes redondeados */
-        display: block;
-    }
-
-    .ubicacion-movil {
-        display: block;
-        text-align: center;
-        font-size: 1.5rem;
-        color: #065a5c;
-        margin-bottom: 0rem;
-        padding: auto;
-
-    }
-}
-
-/* FIX: evitar que los SVG de tecnologías se estiren/desborden.
-   Alta especificidad: sólo afecta SVG dentro de .tecnologias .tech-list .tech-item */
-.tecnologias .tech-list {
-    display: flex !important;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.tecnologias .tech-list .tech-item {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex: 0 0 auto !important;
-    /* evita que el ítem se estire */
-    width: auto !important;
-    height: auto !important;
-}
-
-/* Tamaño fijo de los SVG (desktop). Cambiá 54px por el tamaño que prefieras */
-.tecnologias .tech-list .tech-item svg {
-    width: 54px !important;
-    height: 54px !important;
-    max-width: 54px !important;
-    max-height: 54px !important;
-    display: block !important;
-    flex: 0 0 54px !important;
-    /* evita que los flex items cambien el tamaño */
-}
-
-/* Si los SVG tienen trazos que no querés escalen, opcional */
-.tecnologias .tech-list .tech-item svg * {
-    vector-effect: non-scaling-stroke;
-}
-
-/* Responsive: iconos más pequeños en pantallas chicas */
-@media (max-width: 768px) {
-    .tecnologias .tech-list .tech-item svg {
-        width: 40px !important;
-        height: 40px !important;
-        max-width: 40px !important;
-        max-height: 40px !important;
-        flex: 0 0 40px !important;
+        margin: 0 auto;
     }
 }
 
 /* ===========================
    Fin de los Estilos
 =========================== */
-
-/* Forzar tamaño y forma de la foto de perfil para que no se agrande */
-.sobremi-wrapper .perfil-img,
-.perfil-img {
-    width: 190px !important;
-    height: 190px !important;
-    max-width: 190px !important;
-    max-height: 190px !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;     /* recorta si la imagen no es cuadrada */
-    flex: 0 0 190px !important;       /* evita que el flex la estire */
-    display: block !important;
-    align-self: center !important;
-}
-
-/* Variante para móviles: imagen más pequeña */
-@media (max-width: 480px) {
-    .sobremi-wrapper .perfil-img,
-    .perfil-img {
-        width: 120px !important;
-        height: 120px !important;
-        max-width: 120px !important;
-        max-height: 120px !important;
-        flex: 0 0 120px !important;
-    }
-}
