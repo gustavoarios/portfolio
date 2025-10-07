@@ -1374,15 +1374,30 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;           /* separación horizontal entre los dos botones */
-    padding-top: 1rem;   /* ya existía, se mantiene */
-    flex-wrap: wrap;     /* evita overflow en pantallas pequeñas */
+    gap: 3rem;
+    /* separación horizontal entre los dos botones */
+    padding-top: 1rem;
+    /* ya existía, se mantiene */
+    flex-wrap: wrap;
+    /* evita overflow en pantallas pequeñas */
 }
 
 /* Asegurar que los botones mantengan su tamaño y no se estiren */
 .filosofia .filosofia-links .btn-cobertura,
 .filosofia .filosofia-links a {
     white-space: nowrap;
+}
+
+.filosofia-links a {
+    text-decoration: none;
+    /* quita el subrayado */
+    color: inherit;
+    /* mantiene el color del texto */
+}
+
+.filosofia-links a:hover {
+    text-decoration: none;
+    /* evita que vuelva en hover */
 }
 
 /* Ajuste en móviles: reducir la separación */
@@ -1742,7 +1757,8 @@ footer a {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    flex: 0 0 auto !important; /* evita que el ítem se estire */
+    flex: 0 0 auto !important;
+    /* evita que el ítem se estire */
     width: auto !important;
     height: auto !important;
 }
@@ -1754,7 +1770,8 @@ footer a {
     max-width: 54px !important;
     max-height: 54px !important;
     display: block !important;
-    flex: 0 0 54px !important; /* evita que los flex items cambien el tamaño */
+    flex: 0 0 54px !important;
+    /* evita que los flex items cambien el tamaño */
 }
 
 /* Si los SVG tienen trazos que no querés escalen, opcional */
