@@ -76,7 +76,7 @@ body {
    Header / Navbar
 =========================== */
 header {
-    background-color: #000000 !important;  
+    background-color: #000000 !important;
     /* <- agregamos !important para forzar el cambio */
     color: #000000;
     padding: 0;
@@ -274,7 +274,8 @@ section {
 
 /*TEXTO PRINCIPAL, ACA SE ARREGLA*/
 .hero-section h1.linea-hero {
-    font-size: 3.5rem !important;  /* <-- AQUÍ cambias el tamaño del H1 */
+    font-size: 3.5rem !important;
+    /* <-- AQUÍ cambias el tamaño del H1 */
     font-weight: 700;
     line-height: 0.9 !important;
     margin-bottom: 0.2rem;
@@ -283,7 +284,8 @@ section {
 
 /*TEXTO SECUNDARIO, ACA SE ARREGLA*/
 .bloque-parrafo {
-    font-size: 1.2rem !important;  /* <-- AQUÍ cambias el tamaño del párrafo */
+    font-size: 1.2rem !important;
+    /* <-- AQUÍ cambias el tamaño del párrafo */
     font-weight: 500;
     line-height: 1.4 !important;
 }
@@ -394,7 +396,8 @@ vron-link svg {
     background-repeat: no-repeat;
     min-height: auto;
     display: flex;
-    align-items: center; /* centrar horizontalmente título y contenido */
+    align-items: center;
+    /* centrar horizontalmente título y contenido */
     /* <-- cambia esto */
     justify-content: center;
     position: relative;
@@ -416,10 +419,12 @@ vron-link svg {
     /*Nosotros titulo*/
     font-size: 2rem;
     font-weight: 700;
-    margin-top: 2.5rem;    /* <-- espacio extra arriba del título (ajustá a tu gusto) */
+    margin-top: 2.5rem;
+    /* <-- espacio extra arriba del título (ajustá a tu gusto) */
     margin-bottom: 20px;
     color: #065a5c;
-    text-align: center; /* <-- centrar el título */
+    text-align: center;
+    /* <-- centrar el título */
 }
 
 #nosotros p {
@@ -968,7 +973,8 @@ footer a {
 @media (max-width: 480px) {
     header .navbar-brand img {
         padding-left: 1rem;
-        max-height: 50px; /* Reducir de 60px a 40px en móviles */
+        max-height: 50px;
+        /* Reducir de 60px a 40px en móviles */
         position: center;
     }
 
@@ -1037,7 +1043,8 @@ footer a {
     }
 
     .hero-section h1.linea-hero {
-        font-size: 2.5rem !important;  /* <-- Tamaño del H1 en móviles */
+        font-size: 2.5rem !important;
+        /* <-- Tamaño del H1 en móviles */
         line-height: 1.1 !important;
         text-align: left;
         margin-top: 0rem;
@@ -1045,7 +1052,8 @@ footer a {
     }
 
     .bloque-parrafo {
-        font-size: 1rem !important;  /* <-- Tamaño del párrafo en móviles */
+        font-size: 1rem !important;
+        /* <-- Tamaño del párrafo en móviles */
         text-align: left;
         margin-top: 0rem;
         margin-bottom: 4rem;
@@ -1169,7 +1177,7 @@ footer a {
        Sección Cobertura*/
 
     #cobertura {
-        background-image: url('../img/prepagas.png');
+
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -1281,10 +1289,12 @@ footer a {
 .sobremi-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center; /* <-- centra imagen + texto en el eje horizontal */
+    justify-content: center;
+    /* <-- centra imagen + texto en el eje horizontal */
     gap: 1.25rem;
     max-width: 1000px;
-    margin: 0.5rem auto; /* menos espacio arriba/abajo */
+    margin: 0.5rem auto;
+    /* menos espacio arriba/abajo */
     padding: 0.75rem 1rem;
     box-sizing: border-box;
 }
@@ -1301,7 +1311,8 @@ footer a {
 
 /* Ajustes para texto dentro de sobremi */
 .contenido-nosotros {
-    text-align: center;  /* <-- antes era left, ahora centrado */
+    text-align: center;
+    /* <-- antes era left, ahora centrado */
 }
 
 /* ===========================
@@ -1314,19 +1325,27 @@ footer a {
     box-sizing: border-box;
     display: flex;
     gap: 1rem;
-    align-items: center;           /* <-- centrado horizontal de los hijos */
-    justify-content: center;       /* <-- centra los bloques dentro del contenedor */
-    flex-wrap: wrap;               /* permitir wrap para pantallas pequeñas */
-    flex-direction: column; /* apilar verticalmente */
+    align-items: center;
+    /* <-- centrado horizontal de los hijos */
+    justify-content: center;
+    /* <-- centra los bloques dentro del contenedor */
+    flex-wrap: wrap;
+    /* permitir wrap para pantallas pequeñas */
+    flex-direction: column;
+    /* apilar verticalmente */
 }
 
 /* Reemplazar reglas de card para que no estén limitadas por fondo blanco/sombra */
 .tecnologias,
 .filosofia {
-    background: transparent; /* quitar fondo blanco */
-    border-radius: 0;        /* quitar bordes redondeados */
-    padding: 0;              /* eliminar padding tipo card */
-    box-shadow: none;        /* quitar sombra */
+    background: transparent;
+    /* quitar fondo blanco */
+    border-radius: 0;
+    /* quitar bordes redondeados */
+    padding: 0;
+    /* eliminar padding tipo card */
+    box-shadow: none;
+    /* quitar sombra */
     color: #212529;
     width: 100%;
     box-sizing: border-box;
@@ -1336,8 +1355,10 @@ footer a {
 .tecnologias h3,
 .filosofia h3 {
     text-align: center;
-    font-family: "Lato", sans-serif; /* usar la misma fuente del proyecto */
-    font-weight: 700;                /* coherente con otros títulos */
+    font-family: "Lato", sans-serif;
+    /* usar la misma fuente del proyecto */
+    font-weight: 700;
+    /* coherente con otros títulos */
     color: #065a5c;
 }
 
@@ -1348,15 +1369,123 @@ footer a {
 .filosofia-links .linkedin-link {
     font-family: "Lato", sans-serif;
 }
-.filosofia-links{
+
+.filosofia-links {
     padding-top: 1rem;
     text-align: center;
 }
+
 /* Asegurar títulos secundarios del sitio mantienen la misma familia */
 #nosotros h2,
 .proyecto-titulo,
 .educacion-titulo {
     font-family: "Lato", sans-serif;
+}
+
+/* Estilos para las cards de educación */
+.educacion-contenido {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+}
+
+.educacion-destacado-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Link wrapper para certificaciones */
+.educacion-destacado-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
+
+.educacion-destacado-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.educacion-destacado {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    padding: 2.5rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.educacion-destacado:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen para certificaciones */
+.educacion-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    margin-right: 2rem;
+    object-fit: cover;
+    background: #f0f0f0;
+    border: 2px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.educacion-info {
+    flex: 1;
+}
+
+.educacion-titulo {
+    color: #065a5c;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.educacion-institucion {
+    color: #22c55e;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.educacion-descripcion {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.educacion-estado {
+    display: flex;
+    align-items: center;
+}
+
+.estado-badge {
+    background: #22c55e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.estado-badge.completado {
+    background: #065a5c;
 }
 
 /* ===========================
@@ -1365,6 +1494,7 @@ footer a {
 
 /* Ocultar secciones por defecto en móviles */
 @media (max-width: 768px) {
+
     #nosotros,
     #proyectos,
     #testimonios,
@@ -1581,95 +1711,36 @@ footer a {
     }
 }
 
-/* Overrides para asegurar que los íconos estén uno al lado del otro */
-.nosotros .tecnologias .tech-list,
-.tecnologias .tech-list {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 0.6rem !important;       /* separación horizontal entre iconos */
-    padding-top: 0.6rem !important;   /* espacio moderado arriba */
-    padding-bottom: 0.4rem !important;/* espacio moderado abajo */
-    margin: 0 !important;
-}
-
-.nosotros .tecnologias .tech-list .tech-item,
-.tecnologias .tech-list .tech-item {
-    display: inline-flex !important;
-    flex: 0 0 auto !important;   /* evita que cada item tome todo el ancho */
-    align-items: center !important;
-    justify-content: center !important;
-    padding-top: 0.35rem !important;
-    padding-bottom: 0.35rem !important;
-}
-
-/* Limitar tamaño de los SVG para que no crezcan y mantengan la fila */
-.nosotros .tecnologias .tech-list .tech-item svg,
+/* Forzar tamaño único para los SVG de Tecnologías sin tocar las cards de Educación */
 .tecnologias .tech-list .tech-item svg {
-    width: 40px !important;
-    height: 40px !important;
-    max-width: 44px;
-    max-height: 44px;
-    display: block;
-    margin: 0 auto;
+    width: 54px !important;
+    height: 54px !important;
+    max-width: 54px !important;
+    max-height: 54px !important;
+    display: block !important;
+    flex: 0 0 54px !important;
+    /* evita que el flex lo estire */
 }
 
-/* Ajustes móviles: mantener fila pero con tamaños más pequeños */
+/* Ajuste en pantallas pequeñas: iconos más pequeños */
 @media (max-width: 768px) {
-    .nosotros .tecnologias .tech-list,
-    .tecnologias .tech-list {
-        gap: 0.5rem !important;
-        padding-top: 0.5rem !important;
-        padding-bottom: 0.4rem !important;
-    }
-    .nosotros .tecnologias .tech-list .tech-item svg,
     .tecnologias .tech-list .tech-item svg {
-        width: 34px !important;
-        height: 34px !important;
+        width: 40px !important;
+        height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
+        flex: 0 0 40px !important;
     }
 }
 
-/* ===========================
-   Animaciones Globales
-=========================== */
-
-/* Animación de entrada para secciones */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Aplicar animación a las secciones */
-#nosotros,
-#proyectos,
-#testimonios,
-#cobertura,
-#contacto {
-    animation: fadeInUp 0.6s ease-out forwards;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-/* Mostrar la sección cuando está en el viewport */
-@media (min-width: 768px) {
-    #nosotros,
-    #proyectos,
-    #testimonios,
-    #cobertura,
-    #contacto {
-        opacity: 1;
-        transform: translateY(0);
-        animation: none;
-    }
+/* Mantener el layout de la lista de tecnologías (no afecta cards de educación) */
+.tecnologias .tech-list,
+.tecnologias .tech-list .tech-item {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ===========================
