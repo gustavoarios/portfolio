@@ -1371,8 +1371,25 @@ footer a {
 }
 
 .filosofia-links {
-    padding-top: 1rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;           /* separación horizontal entre los dos botones */
+    padding-top: 1rem;   /* ya existía, se mantiene */
+    flex-wrap: wrap;     /* evita overflow en pantallas pequeñas */
+}
+
+/* Asegurar que los botones mantengan su tamaño y no se estiren */
+.filosofia .filosofia-links .btn-cobertura,
+.filosofia .filosofia-links a {
+    white-space: nowrap;
+}
+
+/* Ajuste en móviles: reducir la separación */
+@media (max-width: 480px) {
+    .filosofia .filosofia-links {
+        gap: 0.5rem;
+    }
 }
 
 /* Asegurar títulos secundarios del sitio mantienen la misma familia */
@@ -1711,18 +1728,41 @@ footer a {
     }
 }
 
-/* Forzar tamaño único para los SVG de Tecnologías sin tocar las cards de Educación */
+/* FIX: evitar que los SVG de tecnologías se estiren/desborden.
+   Alta especificidad: sólo afecta SVG dentro de .tecnologias .tech-list .tech-item */
+.tecnologias .tech-list {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.tecnologias .tech-list .tech-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important; /* evita que el ítem se estire */
+    width: auto !important;
+    height: auto !important;
+}
+
+/* Tamaño fijo de los SVG (desktop). Cambiá 54px por el tamaño que prefieras */
 .tecnologias .tech-list .tech-item svg {
     width: 54px !important;
     height: 54px !important;
     max-width: 54px !important;
     max-height: 54px !important;
     display: block !important;
-    flex: 0 0 54px !important;
-    /* evita que el flex lo estire */
+    flex: 0 0 54px !important; /* evita que los flex items cambien el tamaño */
 }
 
-/* Ajuste en pantallas pequeñas: iconos más pequeños */
+/* Si los SVG tienen trazos que no querés escalen, opcional */
+.tecnologias .tech-list .tech-item svg * {
+    vector-effect: non-scaling-stroke;
+}
+
+/* Responsive: iconos más pequeños en pantallas chicas */
 @media (max-width: 768px) {
     .tecnologias .tech-list .tech-item svg {
         width: 40px !important;
@@ -1731,16 +1771,6 @@ footer a {
         max-height: 40px !important;
         flex: 0 0 40px !important;
     }
-}
-
-/* Mantener el layout de la lista de tecnologías (no afecta cards de educación) */
-.tecnologias .tech-list,
-.tecnologias .tech-list .tech-item {
-    display: flex !important;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    align-items: center;
-    justify-content: center;
 }
 
 /* ===========================

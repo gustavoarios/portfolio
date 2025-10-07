@@ -79,8 +79,8 @@
                 Explora mis proyectos, donde la creatividad se encuentra con la lógica y la tecnología. Desde
                 aplicaciones web hasta soluciones personalizadas, cada proyecto refleja mi compromiso con la innovación
                 y la calidad.
-
-                <!-- Línea decorativa -->
+            </p>
+            <!-- Línea decorativa -->
             <div class="linea-decorativa"></div>
             <!-- Botón -->
             <div class="boton-consulta">
@@ -238,10 +238,10 @@
             <div class="filosofia">
 
                 <div class="filosofia-links">
-                    <!-- Reemplazo: botón para descargar CV y botón para LinkedIn -->
+                    <!-- Reemplazo: usar las mismas clases que los botones de cobertura -->
                     <a href="assets/Gustavo_Rios_CV.pdf"
                        id="cv-link"
-                       class="btn btn-success"
+                       class="btn-cobertura"
                        download="Gustavo_Rios_CV.pdf"
                        rel="noopener"
                        aria-label="Descargar CV">
@@ -250,7 +250,7 @@
 
                     <a href="https://www.linkedin.com/in/gustavoarios/"
                        id="linkedin-link"
-                       class="btn btn-outline-primary"
+                       class="btn-cobertura"
                        target="_blank"
                        rel="noopener"
                        aria-label="LinkedIn">
@@ -621,14 +621,11 @@
             }
 
             // Asigna eventos a los botones
-            document.getElementById('btn-consultas').addEventListener('click', function () {
-                mostrarContenido('consultas');
+            document.getElementById('btn-educacion').addEventListener('click', function () {
+                mostrarContenido('educacion');
             });
-            document.getElementById('btn-guardia').addEventListener('click', function () {
-                mostrarContenido('guardia');
-            });
-            document.getElementById('btn-estudios').addEventListener('click', function () {
-                mostrarContenido('estudios');
+            document.getElementById('btn-certificaciones').addEventListener('click', function () {
+                mostrarContenido('certificaciones');
             });
 
             // Opcional: oculta todos al cargar
