@@ -1080,13 +1080,13 @@ footer a {
     .hero-section h1.linea-hero {
         font-size: 2.5rem !important;
         line-height: 1.1 !important;
-        text-align: left;
+        text-align: center;
         margin: 0;
     }
 
     .bloque-parrafo {
         font-size: 1rem !important;
-        text-align: left;
+        text-align: center;
         margin: 0 0 4rem 0;
     }
 
